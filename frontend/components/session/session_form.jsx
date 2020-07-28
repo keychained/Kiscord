@@ -31,8 +31,16 @@ class SessionForm extends React.Component {
 
     render() {
         return (
+            <>
             <form onSubmit={this.handleSubmit}>
-                <h1>{this.props.formType}</h1>
+                {this.props.formType === 'Welcome back!' ? (
+                        <h1>
+                            {this.props.formType}
+                            <p>We're so excited to see you again!</p>
+                        </h1>
+                ) : (
+                            <h1>{this.props.formType}</h1>
+                )}
                 <label>Username
                     <input type='text'
                         value={this.state.username}
@@ -69,6 +77,7 @@ class SessionForm extends React.Component {
                     <Link to='/login'>Already have an account?</Link>
                 )}
             </form>
+            </>
         )
     }
 };

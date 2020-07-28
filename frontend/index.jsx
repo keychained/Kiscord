@@ -6,7 +6,7 @@ import Root from './components/root';
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     let store;
-    if (window.currentuser) {
+    if (window.currentUser) {
         const preloadedState = {
             entities: {
                 users: { [window.currentUser.id]: window.currentUser }

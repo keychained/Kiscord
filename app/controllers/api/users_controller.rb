@@ -5,23 +5,24 @@ class Api::UsersController < ApplicationController
 
         if @user.save
             login!(@user)
-            render :show
+            render '/api/users/show'
         else
-            render json: @user.errors.full_messages
+            render json: @user.errors.full_messages, status: 422
         end
     end
 
     def show
-        @user = User.find(params[:id])
+        
     end
 
     def index
         @users = User.all
+        render :index
     end
 
     private
 
     def user_params
-        params.require(:user).permit(:username, :password)
+        params.require(:user).permit(:username, :email, :password)
     end
 end

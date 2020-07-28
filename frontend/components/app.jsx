@@ -9,11 +9,12 @@ import {
 import LogInFormContainer from '../components/session/login_form_container';
 import SignUpFormContainer from '../components/session/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import GreetingContainer from '../components/greeting/greeting_container';
 
 const App = () => (
     <div>
-        <h1>KISCORD TESTING</h1>
         <Switch>
+            <Route exact path='/' component={GreetingContainer} />
             <AuthRoute exact path='/login' component={LogInFormContainer} />
             <AuthRoute exact path='/signup' component={SignUpFormContainer} />
         </Switch>

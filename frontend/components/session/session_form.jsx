@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -7,11 +8,15 @@ class SessionForm extends React.Component {
         this.state = {
             username: '',
             email: '',
-            password: ''
+            password: '',
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    // componentWillUnmount() {
+    //     this.props.clearErrors();
+    // }
 
     update(field) {
         return e => {
@@ -34,19 +39,35 @@ class SessionForm extends React.Component {
                         onChange={this.update('username')}
                         />
                 </label>
+                {this.props.formType === 'Create an account' ? (
                 <label>Email
                     <input type='text'
                         value={this.state.email}
                         onChange={this.update('email')}
                     />
                 </label>
+                ) : (
+                    ""
+                )}
                 <label>Password
                     <input type='password'
                         value={this.state.password}
                         onChange={this.update('password')}
                     />
                 </label>
-                <input type='submit' value={this.props.formType}/>
+                {this.props.formType === 'Create an account' ? (
+                    <input type='submit' value='Continue' />
+                ) : (
+                    <input type='submit' value='Login' />
+                )}
+
+                {this.props.formType === 'Welcome back!' ? (
+                    <label>Need an account?
+                    <Link to='/signup'>Register</Link>
+                    </label>
+                ) : (
+                    <Link to='/login'>Already have an account?</Link>
+                )}
             </form>
         )
     }

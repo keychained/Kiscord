@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+    skip_before_action :verify_authenticity_token
     helper_method :current_user, :logged_in?
 
     def login!(user)
@@ -6,6 +7,7 @@ class ApplicationController < ActionController::Base
     end
 
     def logout!
+        @user = current_user
         current_user.reset_session_token!
     end
 

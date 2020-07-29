@@ -24,15 +24,15 @@ export const clearSessionErrors = () => ({
 });
 
 export const signup = user => dispatch => (
-    SessionAPI.signUp(user).then(user => dispatch(receiveCurrentUser(user))).fail((error) => dispatch(receiveErrors(error.responseJSON)))
+    SessionAPI.signUp(user).then(user => dispatch(receiveCurrentUser(user))).fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 export const signin = user => dispatch => (
-    SessionAPI.signIn(user).then(user => dispatch(receiveCurrentUser(user))).fail((error) => dispatch(receiveErrors(error.responseJSON)))
+    SessionAPI.signIn(user).then(user => dispatch(receiveCurrentUser(user))).fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 export const signout = () => dispatch => (
-    SessionAPI.signOut().then(() => dispatch(logoutCurrentUser())).fail((error) => dispatch(receiveErrors(error.responseJSON)))
+    SessionAPI.signOut().then(() => dispatch(logoutCurrentUser())).fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 );
 
 

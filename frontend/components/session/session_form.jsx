@@ -14,9 +14,9 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // componentWillUnmount() {
-    //     this.props.clearErrors();
-    // }
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
 
     update(field) {
         return e => {
@@ -29,10 +29,25 @@ class SessionForm extends React.Component {
         this.props.action(this.state)
     };
 
-    render() {
+    displayErrors() {
         return (
-            <>
+            <ul>
+                {this.props.errors.map((error, idx) => (
+                    <li key={`error-${idx}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    };
+
+
+
+    render() {
+
+        return (
             <form onSubmit={this.handleSubmit}>
+                {this.displayErrors()}
                 {this.props.formType === 'Welcome back!' ? (
                         <h1>
                             {this.props.formType}
@@ -47,6 +62,7 @@ class SessionForm extends React.Component {
                         onChange={this.update('username')}
                         />
                 </label>
+
                 {this.props.formType === 'Create an account' ? (
                 <label>Email
                     <input type='text'
@@ -77,7 +93,7 @@ class SessionForm extends React.Component {
                     <Link to='/login'>Already have an account?</Link>
                 )}
             </form>
-            </>
+
         )
     }
 };

@@ -10,7 +10,7 @@ const receiveCurrentUser = currentUser => ({
     currentUser
 });
 
-const logoutCurrentUser = () => ({
+ const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER,
 });
 

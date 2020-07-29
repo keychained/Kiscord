@@ -11,16 +11,17 @@ class Greeting extends React.Component {
                 <button onClick={signout}>Logout</button>
             </div>
         ) : (
-            <div>
+            <div id='login-btn'>
                 <Link to='/login'>Login</Link>
             </div>
         )
 
         return (
             <div>
+                <img id='logo' src={window.logo}></img>
                 {display}
             </div>
-        )
+        )   
     }
 };
 

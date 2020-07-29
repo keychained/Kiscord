@@ -46,54 +46,83 @@ class SessionForm extends React.Component {
     render() {
 
         return (
+            <div id='form-container'>
             <form onSubmit={this.handleSubmit}>
-                {this.displayErrors()}
                 {this.props.formType === 'Welcome back!' ? (
-                        <h1>
+                        <h1 id='welcome'>
                             {this.props.formType}
-                            <p>We're so excited to see you again!</p>
+                            <br></br>
+                            <br></br>
+                            <p id='welcome-msg'>We're so excited to see you again!</p>
                         </h1>
                 ) : (
-                            <h1>{this.props.formType}</h1>
+                        <h1 id='welcome'>{this.props.formType}</h1>
                 )}
-                <label>Username
-                    <input type='text'
-                        value={this.state.username}
-                        onChange={this.update('username')}
-                        />
-                </label>
-
-                {this.props.formType === 'Create an account' ? (
-                <label>Email
+                    <br></br>
+                    <label id='label'>EMAIL{this.props.errors.length === 1 ? (
+                        this.displayErrors()
+                    ) : (
+                        this.props.errors[1]
+                    )}
+                    <br></br>
                     <input type='text'
                         value={this.state.email}
+                        onChange={this.update('email')}
+                        />
+                </label>
+                    <br></br>
+                {this.props.formType === 'Create an account' ? (
+                    <label id='label'>USERNAME{this.props.errors.length === 1 ? (
+                        this.displayErrors()
+                    ) : (
+                        this.props.errors[0]
+                    )}
+                    <br></br>
+                    <input type='text'
+                        value={this.state.username}
                         onChange={this.update('email')}
                     />
                 </label>
                 ) : (
                     ""
                 )}
-                <label>Password
+                    <br></br>
+                    <label id='label'>PASSWORD{this.props.errors.length === 1 ? (
+                        this.displayErrors()
+                    ) : (
+                        this.props.errors[2]
+                    )}
+                    <br></br>
                     <input type='password'
                         value={this.state.password}
                         onChange={this.update('password')}
                     />
                 </label>
+                    <br></br>
                 {this.props.formType === 'Create an account' ? (
-                    <input type='submit' value='Continue' />
+                    <label id='label'>DATE OF BIRTH
+                        <br></br>
+                            <input type='date'></input>
+                    </label>              
                 ) : (
-                    <input type='submit' value='Login' />
+                    ""
                 )}
-
+                    <br></br>
+                {this.props.formType === 'Create an account' ? (
+                    <input id='label' type='submit' value='Continue' />
+                ) : (
+                    <input id='label' type='submit' value='Login' />
+                )}
+                    <br></br>
                 {this.props.formType === 'Welcome back!' ? (
-                    <label>Need an account?
-                    <Link to='/signup'>Register</Link>
+                    <label id='label'>Need an account?
+                    <Link id='label' to='/signup'>Register</Link>
                     </label>
                 ) : (
-                    <Link to='/login'>Already have an account?</Link>
+                    <Link id='label' to='/login'>Already have an account?</Link>
                 )}
             </form>
-
+            </div>
         )
     }
 };

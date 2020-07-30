@@ -46,68 +46,70 @@ class SessionForm extends React.Component {
     render() {
 
         return (
-            <div id='form-container'>
-            <form onSubmit={this.handleSubmit}>
-                {this.displayErrors()}
-                {this.props.formType === 'Welcome back!' ? (
-                        <h1 id='welcome'>
-                            {this.props.formType}
-                            <br></br>
-                            <br></br>
-                            <p id='welcome-msg'>We're so excited to see you again!</p>
-                        </h1>
-                ) : (
-                        <h1 id='welcome'>{this.props.formType}</h1>
-                )}
-                    <br></br>
-                    <label id='label'>EMAIL
-                    <input type='text'
-                        value={this.state.email}
-                        onChange={this.update('email')}
-                        />
-                </label>
-                    <br></br>
-                {this.props.formType === 'Create an account' ? (
-                    <label id='label'>USERNAME
-                    <input type='text'
-                        value={this.state.username}
-                        onChange={this.update('username')}
-                    />
-                </label>
-                ) : (
-                    ""
-                )}
-                    <br></br>
-                    <label id='label'>PASSWORD
-                    <input type='password'
-                        value={this.state.password}
-                        onChange={this.update('password')}
-                    />
-                </label>
-                    <br></br>
-                {this.props.formType === 'Create an account' ? (
-                    <label id='label'>DATE OF BIRTH
+            <div id='form-parent'>
+                <div id='form-container'>
+                <form onSubmit={this.handleSubmit}>
+                    {this.displayErrors()}
+                    {this.props.formType === 'Welcome back!' ? (
+                            <h1 id='welcome'>
+                                {this.props.formType}
+                                <br></br>
+                                <br></br>
+                                <p id='welcome-msg'>We're so excited to see you again!</p>
+                            </h1>
+                    ) : (
+                            <h1 id='welcome'>{this.props.formType}</h1>
+                    )}
                         <br></br>
-                            <input type='date'></input>
-                    </label>              
-                ) : (
-                    ""
-                )}
-                    <br></br>
-                {this.props.formType === 'Create an account' ? (
-                    <input id='label' type='submit' value='Continue' />
-                ) : (
-                    <input id='label' type='submit' value='Login' />
-                )}
-                    <br></br>
-                {this.props.formType === 'Welcome back!' ? (
-                    <label id='label'>Need an account?
-                    <Link id='label' to='/signup'>Register</Link>
+                        <label id='label'>EMAIL
+                        <input type='text'
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            />
                     </label>
-                ) : (
-                    <Link id='label' to='/login'>Already have an account?</Link>
-                )}
-            </form>
+                        <br></br>
+                    {this.props.formType === 'Create an account' ? (
+                        <label id='label'>USERNAME
+                        <input type='text'
+                            value={this.state.username}
+                            onChange={this.update('username')}
+                        />
+                    </label>
+                    ) : (
+                        ""
+                    )}
+                        <br></br>
+                        <label id='label'>PASSWORD
+                        <input type='password'
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                        />
+                    </label>
+                        <br></br>
+                    {this.props.formType === 'Create an account' ? (
+                        <label id='label'>DATE OF BIRTH
+                            <br></br>
+                                <input type='date'></input>
+                        </label>              
+                    ) : (
+                        ""
+                    )}
+                        <br></br>
+                    {this.props.formType === 'Create an account' ? (
+                        <input id='label' type='submit' value='Continue' />
+                    ) : (
+                        <input id='label' type='submit' value='Login' />
+                    )}
+                        <br></br>
+                    {this.props.formType === 'Welcome back!' ? (
+                        <label id='label'>Need an account?
+                        <Link id='label' to='/signup'>Register</Link>
+                        </label>
+                    ) : (
+                        <Link id='label' to='/login'>Already have an account?</Link>
+                    )}
+                </form>
+                </div>
             </div>
         )
     }

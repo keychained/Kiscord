@@ -7,20 +7,24 @@ class Greeting extends React.Component {
         const { currentUser, signout } = this.props
 
         const display = currentUser ? (
-            <div>
+            <div id='log-btns'>
                 <button id='logout-btn' onClick={signout}>Logout</button>
             </div>
         ) : (
-            <div id='login-btn'>
-                <Link to='/login'>Login</Link>
+            <div id='log-btns'>
+                <div id='login-btn'>
+                    <Link to='/login'>Login</Link>
+                </div>
             </div>
         )
 
         return (
-            <div id='home'>
+            <>
                 <div id='home-background'>
                     {display}
-                    <img id='logo' src={window.logo}></img>
+                    <h1 id='homepage-welcome1'>Your place to Talk</h1>
+                    <p id='homepage-welcome2'>Kiscord makes talking to your friends easier!</p>
+                    <Link to='/'><img id='logo' src={window.logo}></img></Link>
                     <img id='background-left' src={window.backgroundLeft}></img>
                     <img id='background-right' src={window.backgroundRight}></img>
                     <img id='background-1' src={window.background1}></img>
@@ -40,8 +44,22 @@ class Greeting extends React.Component {
                     <img id='background-ship3' src={window.backgroundShip3}></img>
                     <img id='floating-pig' src={window.floatingPig}></img>
                 </div>
-            </div>
-        )   
+                <div id='chilling1'>
+                    <div id='chilling1-container'>
+                        <img id='background-chilling1' src={window.backgroundChilling1}></img>
+                        <div id='chilling1-welcome-container'>
+                            <h1 id='chilling1-welcome'>An Invite-only place with plenty of room to talk</h1>
+                            <h2 id='chilling1-welcome2'>Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.</h2>
+                        </div>
+                    </div>
+               </div>
+                {/* <div id='chilling2-container'>
+                    <img id='background-chilling2' src={window.backgroundChilling2}></img>
+                    <h1 id='chilling2-welcome'>Where hanging out is easy</h1>
+                    <p id='chilling2-welcome2'>Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.</p>
+                </div> */}
+            </>
+        )
     }
 };
 

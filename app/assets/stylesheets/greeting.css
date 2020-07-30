@@ -1,8 +1,12 @@
-div #login-btn {
+#log-btns {
+    position: relative;
+}
+
+#login-btn {
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     position: absolute;
-    top: 20px;
-    right: 35px;
+    top: 17px;
+    right: 390px;
     white-space: nowrap;
     border-radius: 40px;
     padding: 7px 16px;
@@ -36,30 +40,27 @@ div #login-btn {
 }
 
 
-#home {
-    position: relative;
-    background-color: rgb(60, 60, 228);
-    width: 100%;
-    height: 626px;
-}
 #home-background {
     position: relative;
+    background-color: #3359e2;
     width: 100%;
     height: 626px;
     overflow: hidden;                 
 }
 
-div #form-container {
-    z-index: 0;
+#form-parent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#form-container {
     position: absolute;
     background-color: #72767d;
-    top: 15%;
-    right: 35%;
-    width: 414px;
-    height: 340px;
 }
 
 #welcome {
+    position: absolute;
     color: #FFFFFF;
     text-align: center;
     font-size: 25px;
@@ -78,12 +79,88 @@ div #form-container {
     font-size: 12px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
+#homepage-welcome1 {
+    position: relative;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 45px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    top: 250px;
+    width: 100%;
+    z-index: 1;
+}
+
+#homepage-welcome2 {
+    position: relative;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    top: 300px;
+    width: 100%;
+    z-index: 1;
+}
 
 #logo {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 10%;
+    background-color: #3359e2;
+    top: 17px;
+    left: 350px;
+    width: 7%;
+    z-index: 1;
+}
+
+#chilling1 {
+    position: relative;
+    width: 1905px;
+    height: 680px;
+    display: grid;
+}
+
+#chilling1-container {
+    position: relative;
+    left: 323px;
+    width: 1180px;
+    height: 440px;
+    padding: 120px 40px;
+    display: grid;
+}
+
+#background-chilling1 {
+    position: relative;
+    float: left;
+}
+
+#chilling1-welcome-container {
+    position: relative;
+    width: 380px;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+}
+
+#chilling1-welcome {
+    position: relative;
+    text-align: right;
+    color: black;
+    font-size: 30px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+}
+
+#chilling1-welcome2 {
+    position: relative;
+    text-align: right;
+    color: black;
+    font-size: 20px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+
+#chilling2-container {
+    position: relative;
+    width: 100%;
+    height: 680px;
 }
 
 #background-left {
@@ -107,62 +184,106 @@ div #form-container {
 
 #background-2 {
     position: absolute;
-    width: 100%;
-    bottom: -10px;
+    top: 200px;
+    left: 300px;
+    animation-name: floating;
+    animation-duration: 310s;
+    animation-iteration-count: normal;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 #background-3 {
     position: absolute;
-    width: 100%;
-    bottom: -10px;
+    top: 300px;
+    right: 400px;
+    animation-name: floating;
+    animation-duration: 240s;
+    animation-iteration-count: normal;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 #background-4 {
     position: absolute;
-    width: 100%;
-    bottom: -10px;
+    bottom: 0px;
+    left: 500px;
+    animation-name: floating;
+    animation-duration: 210s;
+    animation-iteration-count: normal;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 #background-5 {
     position: absolute;
-    width: 100%;
-    bottom: -10px;
+    bottom: 0px;
+    left: 600px;
+    animation-name: floating;
+    animation-duration: 270s;
+    animation-iteration-count: normal;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 #background-6 {
     position: absolute;
-    width: 100%;
     bottom: -10px;
+    left: 500px;
+    animation-name: floating;
+    animation-duration: 250s;
+    animation-iteration-count: normal;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 #background-7 {
     position: absolute;
-    width: 100%;
     bottom: -10px;
+    animation-name: floating;
+    animation-duration: 260s;
+    animation-iteration-count: normal;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 #background-8 {
     position: absolute;
-    width: 100%;
     bottom: -10px;
+    left: 600px;
+    animation-name: floating;
+    animation-duration: 310s;
+    animation-iteration-count: normal;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 #background-9 {
     position: absolute;
-    width: 100%;
     bottom: -10px;
+    left: 700px;
+    animation-name: floating;
+    animation-duration: 240s;
+    animation-iteration-count: normal;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 #background-10 {
     position: absolute;
-    width: 100%;
     bottom: -10px;
+    left: 800px;
+    animation-name: floating;
+    animation-duration: 320s;
+    animation-iteration-count: normal;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 
 #background-12 {
     position: absolute;
-    width: 100%;
+    left: 900px;
 }
 
 #background-building {
@@ -177,7 +298,7 @@ div #form-container {
     left: 500px;
     animation-name: floating;
     animation-duration: 200s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: normal;
     animation-direction: normal;
     animation-timing-function: ease-in-out;
 }
@@ -188,7 +309,7 @@ div #form-container {
     left: -350px;
     animation-name: floating;
     animation-duration: 200s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: normal;
     animation-direction: normal;
     animation-timing-function: ease-in-out;
 }
@@ -199,7 +320,7 @@ div #form-container {
     right: 500px;
     animation-name: floating;
     animation-duration: 200s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: normal;
     animation-direction: normal;
     animation-timing-function: ease-in-out;
 }
@@ -209,8 +330,8 @@ div #form-container {
     bottom: -150px;
     left: 750px;
     animation-name: pig;
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
+    animation-duration: 60s;
+    animation-iteration-count: normal;
     animation-direction: normal;
     animation-timing-function: ease-in-out;
 }
@@ -222,5 +343,5 @@ div #form-container {
 
 @keyframes pig {
     from { transform: translate(0px, 0px); }
-    to { transform: translate(0px, -700px); }
+    to { transform: translate(0px, -750px); }
 }

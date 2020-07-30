@@ -48,6 +48,7 @@ class SessionForm extends React.Component {
         return (
             <div id='form-container'>
             <form onSubmit={this.handleSubmit}>
+                {this.displayErrors()}
                 {this.props.formType === 'Welcome back!' ? (
                         <h1 id='welcome'>
                             {this.props.formType}
@@ -59,12 +60,7 @@ class SessionForm extends React.Component {
                         <h1 id='welcome'>{this.props.formType}</h1>
                 )}
                     <br></br>
-                    <label id='label'>EMAIL{this.props.errors.length === 1 ? (
-                        this.displayErrors()
-                    ) : (
-                        this.props.errors[1]
-                    )}
-                    <br></br>
+                    <label id='label'>EMAIL
                     <input type='text'
                         value={this.state.email}
                         onChange={this.update('email')}
@@ -72,27 +68,17 @@ class SessionForm extends React.Component {
                 </label>
                     <br></br>
                 {this.props.formType === 'Create an account' ? (
-                    <label id='label'>USERNAME{this.props.errors.length === 1 ? (
-                        this.displayErrors()
-                    ) : (
-                        this.props.errors[0]
-                    )}
-                    <br></br>
+                    <label id='label'>USERNAME
                     <input type='text'
                         value={this.state.username}
-                        onChange={this.update('email')}
+                        onChange={this.update('username')}
                     />
                 </label>
                 ) : (
                     ""
                 )}
                     <br></br>
-                    <label id='label'>PASSWORD{this.props.errors.length === 1 ? (
-                        this.displayErrors()
-                    ) : (
-                        this.props.errors[2]
-                    )}
-                    <br></br>
+                    <label id='label'>PASSWORD
                     <input type='password'
                         value={this.state.password}
                         onChange={this.update('password')}

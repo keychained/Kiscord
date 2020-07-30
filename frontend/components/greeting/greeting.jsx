@@ -8,7 +8,7 @@ class Greeting extends React.Component {
 
         const display = currentUser ? (
             <div>
-                <button onClick={signout}>Logout</button>
+                <button id='logout-btn' onClick={signout}>Logout</button>
             </div>
         ) : (
             <div id='login-btn'>
@@ -17,9 +17,14 @@ class Greeting extends React.Component {
         )
 
         return (
-            <div>
-                <img id='logo' src={window.logo}></img>
-                {display}
+            <div id='home'>
+                <div id='test'>
+                    {display}
+                    <img id='logo' src={window.logo}></img>
+                    <img id='background-left' src={window.backgroundLeft}></img>
+                    <img id='background-right' src={window.backgroundRight}></img>
+                    <img id='background-1' src={window.background1}></img>
+                </div>
             </div>
         )   
     }

@@ -48,41 +48,6 @@
     overflow: hidden;                 
 }
 
-#form-parent {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-
-#form-container {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    background-color: #72767d;
-}
-
-#welcome {
-    position: relative;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 25px;
-    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
-
-}
-
-#welcome-msg {
-    position: relative;
-    color: grey;
-    text-align: center;;
-    font-size: 15px;
-    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-#label {
-    position: relative;
-    font-size: 12px;
-    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
-}
 #homepage-welcome1 {
     position: relative;
     text-align: center;
@@ -292,6 +257,7 @@
 #chilling4-welcome {
     position: relative;
     text-align: center;
+    top: 100px;
     color: black;
     font-weight: 900;
     font-size: 40px;
@@ -478,7 +444,7 @@
 
 #floating-pig {
     position: absolute;
-    bottom: -150px;
+    bottom: -100px;
     left: 750px;
     animation-name: pig;
     animation-duration: 60s;
@@ -489,10 +455,188 @@
 
 @keyframes floating {
     from { transform: translate(0px, 0px); }
-    to { transform: translate(6500px, 0px); }
+    to { transform: translate(100vw, 0px); }
 }
 
 @keyframes pig {
     from { transform: translate(0px, 0px); }
-    to { transform: translate(0px, -750px); }
+    to { transform: translate(0px, -100vh); }
+}
+
+#end-background {
+    position: relative;
+    width: 100vw;
+    height: 280px;
+    background-image: url('end-login.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+#background-end {
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    position: relative;
+    font-weight: 900;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 150px;
+    width: 100vw;
+    height: 200px;
+}
+
+#end-login {
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    position: relative;
+    bottom: 40px;
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #3359e2;
+    z-index: 1;
+    white-space: nowrap;
+    border-radius: 40px;
+    padding: 7px 16px;
+    line-height: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#end-login-text {
+    color: #FFFFFF;
+}
+
+#form-parent {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+#form-parent-container {
+    position: relative;
+    display: block;
+    width: 784px;
+    height: 408px;
+    top: 29vh;
+    left: 18.1vw;
+}
+
+#form-container {
+    position: relative;
+    display: block;
+    /* justify-content: center; */
+    padding: 32px;
+    background-color: #36393f;
+    border-radius: 5px;
+}
+
+
+#login-background {
+    position: absolute;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+#welcome {
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#welcome-msg {
+    position: relative;
+    color: #b9bbbe;
+    top: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#label {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #8E9297;
+    font-weight: 500;
+}
+
+#form-session {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+}
+
+#form-session label {
+    display: grid;
+    padding: 20px;
+}
+
+#login-btn2 {
+    border: 1px solid #677bc4;
+    border-radius: 2px;
+    background: #677bc4;
+    cursor: pointer;
+    color: #FFFFFF;
+    height: 45px;
+    border-radius: 3px;
+}
+
+#login-btn-demo {
+    border: 1px solid #677bc4;
+    border-radius: 2px;
+    background: #677bc4;
+    cursor: pointer;
+    color: #FFFFFF;
+    height: 45px;
+    border-radius: 3px;
+}
+
+#form-session label input {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    border-radius: 2px;
+    size: 40px;
+    resize: vertical;
+    height: 30px;
+}
+
+#form-session label input:focus {
+    border: 1px solid #677bc4;
+    border-radius: 2px;
+}
+
+#register {
+    display: flex;
+    flex-direction: row;
+    /* width: 300px; */
+    font-size: 12px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #72767D
+}
+
+#register-login {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #7289DA;
+}
+
+#register label {
+    display: flex;
+    color: #72767D;
+}
+
+#form-logo {
+    position: absolute;
+    top:  15px;
+    left: 10px;
+    width: 8%;
+    z-index: 1;
 }

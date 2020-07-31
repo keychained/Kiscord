@@ -8,7 +8,7 @@ class Greeting extends React.Component {
 
         const display = currentUser ? (
             <div id='log-btns'>
-                <Link to='/login'><button id='logout-btn' onClick={signout}>Logout</button></Link>
+                <Link to='/login'></Link><button id='logout-btn' onClick={signout}>Logout</button>
             </div>
         ) : (
             <div id='log-btns'>
@@ -79,6 +79,14 @@ class Greeting extends React.Component {
                             <h2 id='chilling4-welcome2'>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</h2>
                         </div>
                         <img id='background-chilling4' src={window.backgroundChilling4}></img>
+                        <div id='end-background'>
+                        <div id='background-end'>
+                            <h1>Ready to start your journey?</h1>
+                        </div>
+                        </div>
+                            <div id='end-login'>
+                                <Link id='end-login-text' to='/login'>Login</Link>
+                            </div>
                     </div>
                 </div>
             </>

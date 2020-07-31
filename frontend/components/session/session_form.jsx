@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this)
     }
 
     componentWillUnmount() {
@@ -27,6 +28,11 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state)
+    };
+
+    handleDemo(e) {
+        e.preventDefault();
+        this.props.demo()
     };
 
     displayErrors() {
@@ -53,21 +59,17 @@ class SessionForm extends React.Component {
                     {this.props.formType === 'Welcome back!' ? (
                             <h1 id='welcome'>
                                 {this.props.formType}
-                                <br></br>
-                                <br></br>
                                 <p id='welcome-msg'>We're so excited to see you again!</p>
                             </h1>
                     ) : (
                             <h1 id='welcome'>{this.props.formType}</h1>
                     )}
-                        <br></br>
                         <label id='label'>EMAIL
                         <input type='text'
                             value={this.state.email}
                             onChange={this.update('email')}
                             />
                     </label>
-                        <br></br>
                     {this.props.formType === 'Create an account' ? (
                         <label id='label'>USERNAME
                         <input type='text'
@@ -78,29 +80,27 @@ class SessionForm extends React.Component {
                     ) : (
                         ""
                     )}
-                        <br></br>
                         <label id='label'>PASSWORD
                         <input type='password'
                             value={this.state.password}
                             onChange={this.update('password')}
                         />
                     </label>
-                        <br></br>
                     {this.props.formType === 'Create an account' ? (
                         <label id='label'>DATE OF BIRTH
-                            <br></br>
                                 <input type='date'></input>
                         </label>              
                     ) : (
                         ""
                     )}
-                        <br></br>
                     {this.props.formType === 'Create an account' ? (
                         <input id='label' type='submit' value='Continue' />
                     ) : (
+                        <>
                         <input id='label' type='submit' value='Login' />
+                        <button onClick={this.handleDemo}>Demo Login</button>
+                        </>
                     )}
-                        <br></br>
                     {this.props.formType === 'Welcome back!' ? (
                         <label id='label'>Need an account?
                         <Link id='label' to='/signup'>Register</Link>

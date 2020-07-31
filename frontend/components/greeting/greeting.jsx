@@ -8,7 +8,7 @@ class Greeting extends React.Component {
 
         const display = currentUser ? (
             <div id='log-btns'>
-                <button id='logout-btn' onClick={signout}>Logout</button>
+                <Link to='/login'><button id='logout-btn' onClick={signout}>Logout</button></Link>
             </div>
         ) : (
             <div id='log-btns'>
@@ -25,6 +25,7 @@ class Greeting extends React.Component {
                     <h1 id='homepage-welcome1'>Your place to Talk</h1>
                     <p id='homepage-welcome2'>Kiscord makes talking to your friends easier!</p>
                     <Link to='/'><img id='logo' src={window.logo}></img></Link>
+                    <img id='diamond' src={window.diamond}></img>
                     <img id='background-left' src={window.backgroundLeft}></img>
                     <img id='background-right' src={window.backgroundRight}></img>
                     <img id='background-1' src={window.background1}></img>
@@ -53,11 +54,33 @@ class Greeting extends React.Component {
                         </div>
                     </div>
                </div>
-                {/* <div id='chilling2-container'>
-                    <img id='background-chilling2' src={window.backgroundChilling2}></img>
-                    <h1 id='chilling2-welcome'>Where hanging out is easy</h1>
-                    <p id='chilling2-welcome2'>Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.</p>
-                </div> */}
+               <div id='chilling2'>
+                    <div id='chilling2-container'>
+                        <div id='chilling2-welcome-container'>
+                            <h1 id='chilling2-welcome'>Where hanging out is easy</h1>
+                            <h2 id='chilling2-welcome2'>Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.</h2>
+                        </div>
+                        <img id='background-chilling2' src={window.backgroundChilling2}></img>
+                    </div>
+               </div>
+                <div id='chilling3'>
+                    <div id='chilling3-container'>
+                        <img id='background-chilling3' src={window.backgroundChilling3}></img>
+                        <div id='chilling3-welcome-container'>
+                            <h1 id='chilling3-welcome'>From a few to a fandom</h1>
+                            <h2 id='chilling3-welcome2'>Get a community of any size running with moderation tools and custom member access. Give members special powers, set up private channels, and more.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div id='chilling4'>
+                    <div id='chilling4-container'>
+                        <div id='chilling4-welcome-container'>
+                            <h1 id='chilling4-welcome'>Reliable tech for staying close</h1>
+                            <h2 id='chilling4-welcome2'>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</h2>
+                        </div>
+                        <img id='background-chilling4' src={window.backgroundChilling4}></img>
+                    </div>
+                </div>
             </>
         )
     }

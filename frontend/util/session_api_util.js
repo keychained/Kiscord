@@ -21,10 +21,12 @@ export const signOut = () => (
     })
 );
 
-// export const demoUser = user => (
-//     $.ajax({
-//         method: 'POST',
-//         url: '/api/session',
-//         data: { user}
-//     })
-// );
+export const demoUser = () => (
+    $.ajax({
+        method: 'POST',
+        url: '/api/session',
+        data: { user: {
+            username: 'demodemo', email: 'demodemo', password: 'password'
+        }}
+    })
+);

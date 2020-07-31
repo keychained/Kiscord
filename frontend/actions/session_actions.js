@@ -35,4 +35,8 @@ export const signout = () => dispatch => (
     SessionAPI.signOut().then(() => dispatch(logoutCurrentUser())).fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 );
 
+export const demouser = () => dispatch => (
+    SessionAPI.demoUser().then((user) => dispatch(receiveCurrentUser(user)))
+);
+
 

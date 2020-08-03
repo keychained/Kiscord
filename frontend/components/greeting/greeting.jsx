@@ -8,7 +8,7 @@ class Greeting extends React.Component {
 
         const display = currentUser ? (
             <div id='log-btns'>
-                <Link to='/login'></Link><button id='logout-btn' onClick={signout}>Logout</button>
+                <button id='logout-btn' onClick={signout}>Logout</button>
             </div>
         ) : (
             <div id='log-btns'>
@@ -85,7 +85,7 @@ class Greeting extends React.Component {
                         </div>
                         </div>
                             <div id='end-login'>
-                                <Link id='end-login-text' to='/login'>Login</Link>
+                                <Link id='end-login-text' to='/signup'>Sign Up</Link>
                             </div>
                     </div>
                 </div>

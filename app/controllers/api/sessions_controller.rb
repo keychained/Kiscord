@@ -6,17 +6,17 @@ class Api::SessionsController < ApplicationController
             login!(@user)
             render '/api/users/show'
         else
-            render json: ["Email/Password is required"], status: 401
+            render json: ["This field is required"], status: 401
         end
     end
 
     def destroy
         logout!
 
-        if current_user
-            render '/api/users/show'
-        else
-            render json: ["Sign In first!"], status: 404
-        end
+        # if current_user
+        #     render '/api/users/show'
+        # else
+        #     render json: ["Sign In first!"], status: 404
+        # end
     end
 end

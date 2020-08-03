@@ -557,6 +557,7 @@
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+
 #label {
     position: relative;
     display: block;
@@ -566,18 +567,41 @@
     font-weight: 500;
 }
 
+#label-error {
+    position: relative;
+    top: 7px;
+    font-style: italic;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: red;
+    font-size: 11px;
+}
+
+#label-error2 {
+    position: relative;
+    text-align: center;
+    padding-bottom: 10px;
+    font-style: italic;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: red;
+    font-size: 11px;
+}
+
 #form-session {
-    /* position: relative; */
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 #form-session label {
+    position: relative;
     display: grid;
     padding: 20px;
 }
 
 #login-btn2 {
+    position: relative;
     border: 1px solid #677bc4;
     border-radius: 2px;
     background: #677bc4;
@@ -588,6 +612,8 @@
 }
 
 #login-btn-demo {
+    position: relative;
+    top: 10px;
     border: 1px solid #677bc4;
     border-radius: 2px;
     background: #677bc4;
@@ -597,7 +623,15 @@
     border-radius: 3px;
 }
 
+#login-btns {
+    position: relative;
+    display: grid;
+    top: 15px;
+}
+
 #form-session label input {
+    position: relative;
+    top: 15px;
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid black;
     border-radius: 2px;
@@ -611,19 +645,38 @@
     border-radius: 2px;
 }
 
-#register {
+#register1 {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    /* width: 300px; */
+    left: -20px;
+    top: 40px;
     font-size: 12px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #72767D
 }
 
-#register-login {
+#register2 {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    top: 30px;
     font-size: 12px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #72767D
+}
+
+
+#register-login1 {
+    display: flex;
+    padding-top: 5px;
+    font-size: 12px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #7289DA;
+}
+
+#register-login2 {
+    display: flex;
+    font-size: 12px;
+    padding-bottom: 10px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #7289DA;
 }

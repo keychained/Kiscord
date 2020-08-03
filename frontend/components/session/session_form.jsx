@@ -58,7 +58,15 @@ class SessionForm extends React.Component {
                 <div id='form-parent-container'>
                     <div id='form-container'>
                         <form id='form-session' onSubmit={this.handleSubmit}>
-                            {this.displayErrors()}
+                            <div id='label-error2'>
+                            {this.props.errors.length === 1 ? (
+                                ""
+                            ) : (
+                                <>
+                                {this.displayErrors()}
+                                </>
+                            )}
+                            </div>
                             {this.props.formType === 'Welcome back!' ? (
                                     <h1 id='welcome'>
                                         {this.props.formType}
@@ -67,11 +75,16 @@ class SessionForm extends React.Component {
                             ) : (
                                     <h1 id='welcome'>{this.props.formType}</h1>
                             )}
-                                <br></br>
-                                <br></br>
-                                <label id='label'>EMAIL
-                                <br></br>
-                                <br></br>
+                            <label id='label'>EMAIL
+                                <div id='label-error'>
+                                {this.props.errors.length === 1 ? (
+                                    <>
+                                    {this.displayErrors()}
+                                    </>
+                                ) : (
+                                    ""
+                                )}
+                                </div>
                                 <input type='text'
                                     value={this.state.email}
                                     onChange={this.update('email')}
@@ -79,8 +92,6 @@ class SessionForm extends React.Component {
                             </label>
                             {this.props.formType === 'Create an account' ? (
                                 <label id='label'>USERNAME
-                                <br></br>
-                                <br></br>
                                 <input type='text'
                                     value={this.state.username}
                                     onChange={this.update('username')}
@@ -90,8 +101,15 @@ class SessionForm extends React.Component {
                                 ""
                             )}
                                 <label id='label'>PASSWORD
-                                <br></br>
-                                <br></br>
+                                <div id='label-error'>
+                                {this.props.errors.length === 1 ? (
+                                    <>
+                                    {this.displayErrors()}
+                                    </>
+                                ) : (
+                                    ""
+                                )}
+                                </div>
                                 <input type='password'
                                     value={this.state.password}
                                     onChange={this.update('password')}
@@ -99,32 +117,31 @@ class SessionForm extends React.Component {
                             </label>
                             {this.props.formType === 'Create an account' ? (
                                 <label id='label'>DATE OF BIRTH
-                                <br></br>
                                 <input type='date'></input>
                                 </label>              
                             ) : (
                                 ""
                             )}
+                            <div id='login-btns'>
                             {this.props.formType === 'Create an account' ? (
                                 <input id='login-btn2' type='submit' value='Continue' />
                             ) : (
                                 <>
                                 <input id='login-btn2' type='submit' value='Login'/>
-                                <br></br>
                                 <button id='login-btn-demo' onClick={this.handleDemo}>Demo Login</button>
                                 </>
                             )}
+                            </div>
                             {this.props.formType === 'Welcome back!' ? (
-                                <div id='register'>
+                                <div id='register1'>
                                     <label>Need an account?
-                                    <Link id='register-login' to='/signup'>Register</Link>
+                                    <Link id='register-login1' to='/register'>Register</Link>
                                     </label>
                                 </div>
                             ) : (
-                                <>
-                                <br></br>
-                                <Link id='register-login' to='/login'>Already have an account?</Link>
-                                </>
+                                <div id ='register2'>
+                                <Link id='register-login2' to='/login'>Already have an account?</Link>
+                                </div>
                             )}
                         </form>
                     </div>

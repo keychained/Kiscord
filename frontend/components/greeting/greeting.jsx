@@ -85,7 +85,7 @@ class Greeting extends React.Component {
                         </div>
                         </div>
                             <div id='end-login'>
-                                <Link id='end-login-text' to='/signup'>Sign Up</Link>
+                                <Link id='end-login-text' to='/register'>Sign Up</Link>
                             </div>
                     </div>
                 </div>

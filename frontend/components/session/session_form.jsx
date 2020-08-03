@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
                             )}
                             <label id='label'>EMAIL
                                 <div id='label-error'>
-                                    {this.props.errors['email'] && (document.getElementById('email-text').value.split("@").length !== 2) ? this.props.errors['email'] : ""}
+                                    {this.props.errors['email'] && (document.getElementById('email-text').value.split("@").length !== 2) ? this.props.errors['email'] : "" }
                                 </div>
                                 <input id='email-text' type='text'
                                     value={this.state.email}
@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
                             {this.props.formType === 'Create an account' ? (
                                 <label id='label'>USERNAME
                                     <div id='label-error'>
-                                        {this.props.errors['username'] && (document.getElementById('username-text').value.length === 0) ? this.props.errors['username'] : ""}
+                                        {this.props.errors['username'] && (document.getElementById('username-text').value.length === 0) ? this.props.errors['username'] : "" }
                                     </div>
                                 <input id='username-text' type='text'
                                     value={this.state.username}
@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
                             )}
                                 <label id='label'>PASSWORD
                                 <div id='label-error'>
-                                    {this.props.errors['password'] && (document.getElementById('password-text').value.length < 6) ? this.props.errors['password'] : ""}
+                                    {this.props.errors['password'] && (document.getElementById('password-text').value.length < 6) ? this.props.errors['password'] : "" }
                                 </div>
                                 <input id='password-text' type='password'
                                     value={this.state.password}

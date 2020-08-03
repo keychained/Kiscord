@@ -2,7 +2,7 @@ class User < ApplicationRecord
     attr_reader :password
 
     validates :username, presence: true, uniqueness: true
-    validates :email, presence: true, uniqueness: true
+    validates :email, presence: true, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create, message: "must include @ and a server domain" } 
     validates :password_digest, :session_token, presence: true
     validates :password, length: { minimum: 6, allow_nil: true }
 
@@ -28,8 +28,8 @@ class User < ApplicationRecord
         self.session_token
     end
 
-    def self.find_by_credentials(username, password)
-        user = User.find_by(username: username)
+    def self.find_by_credentials(email, password)
+        user = User.find_by(email: email)
 
         return nil if user.nil?
         user.is_password?(password) ? user : nil

@@ -6,9 +6,9 @@ class SessionForm extends React.Component {
         super(props);
 
         this.state = {
-            username: '',
             email: '',
-            password: '',
+            username: '',
+            password: ''
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,18 +35,6 @@ class SessionForm extends React.Component {
         this.props.demo()
     };
 
-    displayErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, idx) => (
-                    <li key={`error-${idx}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
-    };
-
 
 
     render() {
@@ -58,15 +46,6 @@ class SessionForm extends React.Component {
                 <div id='form-parent-container'>
                     <div id='form-container'>
                         <form id='form-session' onSubmit={this.handleSubmit}>
-                            <div id='label-error2'>
-                            {this.props.errors.length === 1 ? (
-                                ""
-                            ) : (
-                                <>
-                                {this.displayErrors()}
-                                </>
-                            )}
-                            </div>
                             {this.props.formType === 'Welcome back!' ? (
                                     <h1 id='welcome'>
                                         {this.props.formType}
@@ -77,40 +56,31 @@ class SessionForm extends React.Component {
                             )}
                             <label id='label'>EMAIL
                                 <div id='label-error'>
-                                {this.props.errors.length === 1 ? (
-                                    <>
-                                    {this.displayErrors()}
-                                    </>
-                                ) : (
-                                    ""
-                                )}
+                                    {this.props.errors['email'] && (document.getElementById('email-text').value.split("@").length !== 2) ? this.props.errors['email'] : ""}
                                 </div>
-                                <input type='text'
+                                <input id='email-text' type='text'
                                     value={this.state.email}
                                     onChange={this.update('email')}
                                     />
                             </label>
                             {this.props.formType === 'Create an account' ? (
                                 <label id='label'>USERNAME
-                                <input type='text'
+                                    <div id='label-error'>
+                                        {this.props.errors['username'] && (document.getElementById('username-text').value.length === 0) ? this.props.errors['username'] : ""}
+                                    </div>
+                                <input id='username-text' type='text'
                                     value={this.state.username}
                                     onChange={this.update('username')}
                                 />
-                            </label>
+                                </label>
                             ) : (
                                 ""
                             )}
                                 <label id='label'>PASSWORD
                                 <div id='label-error'>
-                                {this.props.errors.length === 1 ? (
-                                    <>
-                                    {this.displayErrors()}
-                                    </>
-                                ) : (
-                                    ""
-                                )}
+                                    {this.props.errors['password'] && (document.getElementById('password-text').value.length < 6) ? this.props.errors['password'] : ""}
                                 </div>
-                                <input type='password'
+                                <input id='password-text' type='password'
                                     value={this.state.password}
                                     onChange={this.update('password')}
                                 />
@@ -124,7 +94,7 @@ class SessionForm extends React.Component {
                             )}
                             <div id='login-btns'>
                             {this.props.formType === 'Create an account' ? (
-                                <input id='login-btn2' type='submit' value='Continue' />
+                                <input id='login-btn2' type='submit' value='Continue'/>
                             ) : (
                                 <>
                                 <input id='login-btn2' type='submit' value='Login'/>

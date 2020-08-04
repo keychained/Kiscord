@@ -12,8 +12,11 @@ class Greeting extends React.Component {
             </div>
         ) : (
             <div id='log-btns'>
-                <div id='login-btn'>
+                <div id='login-btn0'>
+                    <Link to='/register'>Sign Up</Link>
+                    <div id='login-btn1'>
                     <Link to='/login'>Login</Link>
+                    </div>
                 </div>
             </div>
         )
@@ -22,6 +25,13 @@ class Greeting extends React.Component {
             <>
                 <div id='home-background'>
                     {display}
+                    <div id='nav'>
+                        <Link id='nav-btn' to='/'>Download</Link>
+                        <Link id='nav-btn' to='/login'>Why Discord?</Link>
+                        <Link id='nav-btn' to='/register'>Nitro</Link>
+                        <Link id='nav-btn' to='/login'>Safety</Link>
+                        <Link id='nav-btn' to='/'>Support</Link>
+                    </div>
                     <h1 id='homepage-welcome1'>Your place to Talk</h1>
                     <p id='homepage-welcome2'>Kiscord makes talking to your friends easier!</p>
                     <Link to='/'><img id='logo' src={window.logo}></img></Link>

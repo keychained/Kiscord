@@ -1,13 +1,30 @@
+
 #log-btns {
     position: relative;
 }
 
-#login-btn {
+#nav {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+#nav #nav-btn {
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 450;
+    position: relative;
+    top: 30px;
+    padding: 20px;
+    color: white;
+}
+
+#login-btn0 {
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     position: absolute;
-    top: 21px;
-    right: 364px;
+    top: 15px;
+    right: 40px;
     white-space: nowrap;
+    font-size: 13px;
     border-radius: 40px;
     padding: 7px 16px;
     line-height: 24px;
@@ -18,7 +35,25 @@
     text-align: end;
     box-sizing: border-box;
     z-index: 1;
+}
 
+#login-btn1 {
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 0px;
+    right: 85px;
+    white-space: nowrap;
+    font-size: 13px;
+    border-radius: 40px;
+    padding: 7px 16px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-flex;
+    background-color: white;
+    text-align: end;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 #logout-btn {
@@ -52,7 +87,8 @@
     position: relative;
     text-align: center;
     color: #FFFFFF;
-    font-size: 45px;
+    font-weight: 700;
+    font-size: 50px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     top: 250px;
     width: 100%;
@@ -73,9 +109,9 @@
 #logo {
     position: absolute;
     background-color: #3359e2;
-    top: 17px;
-    left: 350px;
-    width: 7%;
+    top: 5px;
+    left: 0px;
+    width: 12%;
     z-index: 1;
 }
 
@@ -236,7 +272,7 @@
     position: relative;
     width: 100vw;
     height: 440px;
-    padding: 120px 40px;
+    padding: 0px 40px;
     justify-content: center;
 }
 
@@ -248,7 +284,7 @@
 
 #chilling4-welcome-container {
     position: relative;
-    top: 100px;
+    top: 80px;
     width: 50vw;
     height: 440px;
     display: grid;
@@ -257,7 +293,7 @@
 #chilling4-welcome {
     position: relative;
     text-align: center;
-    top: 100px;
+    top: 60px;
     color: black;
     font-weight: 900;
     font-size: 40px;

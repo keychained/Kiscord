@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state)
+        this.props.action(this.state);
     };
 
     handleDemo(e) {
@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
                             )}
                             <label id='label'>EMAIL
                                 <div id='label-error'>
-                                    {this.props.errors['email'] && (document.getElementById('email-text').value.split("@").length !== 2) ? this.props.errors['email'] : "" }
+                                    {this.props.errors['email'] && (document.getElementById('email-text').value.split("@").join("").split(".").length < 2) ? this.props.errors['email'] : "" }
                                 </div>
                                 <input id='email-text' type='text'
                                     value={this.state.email}

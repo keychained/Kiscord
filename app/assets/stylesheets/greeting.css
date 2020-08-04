@@ -306,7 +306,7 @@
     animation-duration: 310s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-3 {
@@ -317,7 +317,7 @@
     animation-duration: 240s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-4 {
@@ -328,7 +328,7 @@
     animation-duration: 210s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-5 {
@@ -339,7 +339,7 @@
     animation-duration: 270s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-6 {
@@ -350,7 +350,7 @@
     animation-duration: 250s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-7 {
@@ -360,7 +360,7 @@
     animation-duration: 260s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-8 {
@@ -371,7 +371,7 @@
     animation-duration: 310s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-9 {
@@ -382,7 +382,7 @@
     animation-duration: 240s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-10 {
@@ -393,7 +393,7 @@
     animation-duration: 320s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 
@@ -417,7 +417,7 @@
     animation-duration: 200s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-ship2 {
@@ -428,7 +428,7 @@
     animation-duration: 200s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #background-ship3 {
@@ -439,7 +439,7 @@
     animation-duration: 200s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 #floating-pig {
@@ -447,10 +447,10 @@
     bottom: -100px;
     left: 750px;
     animation-name: pig;
-    animation-duration: 60s;
+    animation-duration: 150s;
     animation-iteration-count: normal;
     animation-direction: normal;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
 }
 
 @keyframes floating {
@@ -576,15 +576,7 @@
     font-size: 11px;
 }
 
-#label-error2 {
-    position: relative;
-    text-align: center;
-    padding-bottom: 10px;
-    font-style: italic;
-    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
-    color: red;
-    font-size: 11px;
-}
+
 
 #form-session {
     position: relative;

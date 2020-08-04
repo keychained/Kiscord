@@ -18,6 +18,29 @@
     color: white;
 }
 
+#nav2-bar {
+    position: relative;
+    background-color: #23272a;
+    left: -40px;
+    width: 100vw;
+    height: 200px;
+}
+
+#nav2 {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+#nav2 #nav-btn2 {
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 450;
+    top: 70px;
+    position: relative;
+    padding: 30px;
+    color: white;
+}
+
 #login-btn0 {
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     position: absolute;
@@ -110,6 +133,15 @@
     position: absolute;
     background-color: #3359e2;
     top: 5px;
+    left: 0px;
+    width: 12%;
+    z-index: 1;
+}
+
+#logo2 {
+    position: absolute;
+    background-color: #23272a;
+    top: 70px;
     left: 0px;
     width: 12%;
     z-index: 1;
@@ -337,7 +369,7 @@
 #background-2 {
     position: absolute;
     top: 200px;
-    left: 300px;
+    left: 100px;
     animation-name: floating;
     animation-duration: 310s;
     animation-iteration-count: normal;
@@ -348,7 +380,7 @@
 #background-3 {
     position: absolute;
     top: 300px;
-    right: 400px;
+    right: 200px;
     animation-name: floating;
     animation-duration: 240s;
     animation-iteration-count: normal;
@@ -370,9 +402,9 @@
 #background-5 {
     position: absolute;
     bottom: 0px;
-    left: 600px;
+    left: 400px;
     animation-name: floating;
-    animation-duration: 270s;
+    animation-duration: 320s;
     animation-iteration-count: normal;
     animation-direction: normal;
     animation-timing-function: linear;
@@ -381,9 +413,9 @@
 #background-6 {
     position: absolute;
     bottom: -10px;
-    left: 500px;
+    left: 300px;
     animation-name: floating;
-    animation-duration: 250s;
+    animation-duration: 210s;
     animation-iteration-count: normal;
     animation-direction: normal;
     animation-timing-function: linear;
@@ -404,7 +436,7 @@
     bottom: -10px;
     left: 600px;
     animation-name: floating;
-    animation-duration: 310s;
+    animation-duration: 260s;
     animation-iteration-count: normal;
     animation-direction: normal;
     animation-timing-function: linear;
@@ -533,7 +565,7 @@
     z-index: 1;
     white-space: nowrap;
     border-radius: 40px;
-    padding: 7px 16px;
+    padding: 14px 20px;
     line-height: 24px;
     cursor: pointer;
     z-index: 1;
@@ -553,7 +585,7 @@
 #form-parent-container {
     position: relative;
     display: block;
-    width: 784px;
+    width: 700px;
     height: 408px;
     top: 29vh;
     left: 18.1vw;
@@ -580,6 +612,7 @@
     position: relative;
     color: #FFFFFF;
     text-align: center;
+    font-weight: 600;
     font-size: 25px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -587,6 +620,7 @@
 #welcome-msg {
     position: relative;
     color: #b9bbbe;
+    font-weight: 400;
     top: 20px;
     text-align: center;
     font-size: 15px;
@@ -625,7 +659,7 @@
 #form-session label {
     position: relative;
     display: grid;
-    padding: 20px;
+    padding: 20px 0px;
 }
 
 #login-btn2 {
@@ -641,7 +675,7 @@
 
 #login-btn-demo {
     position: relative;
-    top: 10px;
+    top: 20px;
     border: 1px solid #677bc4;
     border-radius: 2px;
     background: #677bc4;
@@ -665,7 +699,7 @@
     border-radius: 2px;
     size: 40px;
     resize: vertical;
-    height: 30px;
+    height: 40px;
 }
 
 #form-session label input:focus {
@@ -678,6 +712,7 @@
     display: flex;
     left: -20px;
     top: 40px;
+    padding: 0px 20px;
     font-size: 12px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #72767D
@@ -694,7 +729,9 @@
 
 
 #register-login1 {
-    display: flex;
+    position: relative;
+    left: 102px;
+    bottom: 17px;
     padding-top: 5px;
     font-size: 12px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -704,7 +741,8 @@
 #register-login2 {
     display: flex;
     font-size: 12px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #7289DA;
 }

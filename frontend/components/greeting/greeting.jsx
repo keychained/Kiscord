@@ -97,6 +97,16 @@ class Greeting extends React.Component {
                             <div id='end-login'>
                                 <Link id='end-login-text' to='/register'>Sign Up</Link>
                             </div>
+                            <div id='nav2-bar'>
+                                <div id='nav2'>
+                                    <Link id='nav-btn2' to='/'>Download</Link>
+                                    <Link id='nav-btn2' to='/login'>Why Discord?</Link>
+                                    <Link id='nav-btn2' to='/register'>Nitro</Link>
+                                    <Link id='nav-btn2' to='/login'>Safety</Link>
+                                    <Link id='nav-btn2' to='/'>Support</Link>
+                                    <Link to='/'><img id='logo2' src={window.logo}></img></Link>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </>

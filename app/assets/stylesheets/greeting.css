@@ -82,8 +82,26 @@
 #logout-btn {
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     position: absolute;
-    top: 21px;
-    right: 364px;
+    top: 15px;
+    right: 40px;
+    white-space: nowrap;
+    border-radius: 40px;
+    padding: 7px 16px;
+    line-height: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-flex;
+    background-color: white;
+    text-align: end;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+#discord-btn {
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 80px;
+    right: 40px;
     white-space: nowrap;
     border-radius: 40px;
     padding: 7px 16px;
@@ -311,12 +329,13 @@
 #background-chilling4 {
     position: relative;
     float: bottom;
+    bottom: 100px;
     width: 60%;
 }
 
 #chilling4-welcome-container {
     position: relative;
-    top: 80px;
+    bottom: 20px;
     width: 50vw;
     height: 440px;
     display: grid;
@@ -325,7 +344,7 @@
 #chilling4-welcome {
     position: relative;
     text-align: center;
-    top: 60px;
+    top: 80px;
     color: black;
     font-weight: 900;
     font-size: 40px;
@@ -614,6 +633,7 @@
     text-align: center;
     font-weight: 600;
     font-size: 25px;
+    padding-bottom: 40px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -637,14 +657,26 @@
     font-weight: 500;
 }
 
+
+
 #label-error {
     position: relative;
     top: 7px;
     font-style: italic;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
-    color: red;
+    color: #f04747;
     font-size: 11px;
+    /* animation-name: errors;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    animation-duration: 4s;
+    animation-timing-function: linear; */
 }
+
+/* @keyframes errors {
+    from { color: #f04747 }
+    to { color: #36393f }
+} */
 
 
 
@@ -664,6 +696,7 @@
 
 #login-btn2 {
     position: relative;
+    top: 10px;
     border: 1px solid #677bc4;
     border-radius: 2px;
     background: #677bc4;
@@ -675,7 +708,7 @@
 
 #login-btn-demo {
     position: relative;
-    top: 20px;
+    top: 30px;
     border: 1px solid #677bc4;
     border-radius: 2px;
     background: #677bc4;
@@ -690,6 +723,7 @@
     display: grid;
     top: 15px;
 }
+
 
 #form-session label input {
     position: relative;
@@ -706,6 +740,8 @@
     border: 1px solid #677bc4;
     border-radius: 2px;
 }
+
+
 
 #register1 {
     position: relative;
@@ -758,4 +794,11 @@
     left: 10px;
     width: 8%;
     z-index: 1;
+}
+
+#server-background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #36393f;
 }

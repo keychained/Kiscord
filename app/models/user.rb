@@ -8,6 +8,11 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
+    has_many :servers,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: 'Server'
+
     def password=(password)
         @password = password
 

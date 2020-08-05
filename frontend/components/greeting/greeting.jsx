@@ -9,6 +9,7 @@ class Greeting extends React.Component {
         const display = currentUser ? (
             <div id='log-btns'>
                 <button id='logout-btn' onClick={signout}>Logout</button>
+                <Link id='discord-btn' to='/channels/@me'>Open Discord</Link>
             </div>
         ) : (
             <div id='log-btns'>

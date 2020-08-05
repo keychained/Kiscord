@@ -11,8 +11,9 @@ class SessionForm extends React.Component {
             password: ''
         }
 
+        
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleDemo = this.handleDemo.bind(this)
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     componentWillUnmount() {
@@ -28,6 +29,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state);
+        this.props.clearErrors();
     };
 
     handleDemo(e) {
@@ -54,21 +56,21 @@ class SessionForm extends React.Component {
                             ) : (
                                     <h1 id='welcome'>{this.props.formType}</h1>
                             )}
-                            <label id='label'>EMAIL
+                            <label id={this.props.errors['email'] && (document.querySelector('#email-input-error, #email-input').value.split("@").join("").split(".").length < 2) ? 'label-session-error' : 'label'}>EMAIL
                                 <div id='label-error'>
-                                    {this.props.errors['email'] && (document.getElementById('email-text').value.split("@").join("").split(".").length < 2) ? this.props.errors['email'] : this.props.errors['email1'] }
+                                    {this.props.errors['email'] && (document.querySelector('#email-input-error, #email-input').value.split("@").join("").split(".").length < 2) ? this.props.errors['email'] : this.props.errors['email1'] }
                                 </div>
-                                <input id='email-text' type='text'
+                                <input id={this.props.errors['email'] ? 'email-input-error' : 'email-input'} type='text'
                                     value={this.state.email}
                                     onChange={this.update('email')}
                                     />
                             </label>
                             {this.props.formType === 'Create an account' ? (
-                                <label id='label'>USERNAME
+                                <label id={this.props.errors['username'] && (document.querySelector('#username-input-error, #username-input').value.length === 0) ? 'label-session-error' : 'label'}>USERNAME
                                     <div id='label-error'>
-                                        {this.props.errors['username'] && (document.getElementById('username-text').value.length === 0) ? this.props.errors['username'] : this.props.errors['username1'] }
+                                        {this.props.errors['username'] && (document.querySelector('#username-input-error, #username-input').value.length === 0) ? this.props.errors['username'] : this.props.errors['username1'] }
                                     </div>
-                                <input id='username-text' type='text'
+                                    <input id={this.props.errors['username'] ? 'username-input-error' : 'username-input'} type='text'
                                     value={this.state.username}
                                     onChange={this.update('username')}
                                 />
@@ -76,18 +78,18 @@ class SessionForm extends React.Component {
                             ) : (
                                 ""
                             )}
-                                <label id='label'>PASSWORD
+                            <label id={this.props.errors['password'] && (document.querySelector("#password-input-error, #password-input").value.length < 6) ? 'label-session-error' : 'label'}>PASSWORD
                                 <div id='label-error'>
-                                    {this.props.errors['password'] ? this.props.errors['password'] : "" }
+                                    {this.props.errors['password'] && (document.querySelector('#password-input-error, #password-input').value.length < 6) ? this.props.errors['password'] : "" }
                                 </div>
-                                <input id='password-text' type='password'
+                                <input id={this.props.errors['password'] ? 'password-input-error' : 'password-input'} type='password'
                                     value={this.state.password}
                                     onChange={this.update('password')}
                                 />
                             </label>
                             {this.props.formType === 'Create an account' ? (
                                 <label id='label'>DATE OF BIRTH
-                                <input type='date'></input>
+                                <input id='date-text'type='date'></input>
                                 </label>              
                             ) : (
                                 ""

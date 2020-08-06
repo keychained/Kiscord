@@ -291,6 +291,7 @@ class SessionForm extends React.Component {
                             ) : (
                                 <div id ='register2'>
                                 <Link id='register-login2' to='/login'>Already have an account?</Link>
+                                        <p id='terms'>By creating an account, you agree to Kiscord's <a href="https://discord.com/new/terms">Terms of Service</a> and <a href="https://discord.com/new/privacy">Privacy Policy</a></p>
                                 </div>
                             )}
                         </form>

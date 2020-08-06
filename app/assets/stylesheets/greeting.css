@@ -633,7 +633,7 @@
     text-align: center;
     font-weight: 600;
     font-size: 25px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -929,7 +929,20 @@ option[value=""][disabled] {
     display: flex;
     font-size: 12px;
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #7289DA;
+}
+
+#terms {
+    position: absolute;
+    top: 35px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #72767D;
+}
+
+#terms a {
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #7289DA;
 }

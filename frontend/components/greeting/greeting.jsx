@@ -27,7 +27,7 @@ class Greeting extends React.Component {
                 <div id='home-background'>
                     {display}
                     <div id='nav'>
-                        <a href></a>
+                        <a id='nav-btn' href="https://github.com/keychained">Kishub</a>
                     </div>
                     <h1 id='homepage-welcome1'>Your place to Talk</h1>
                     <p id='homepage-welcome2'>Kiscord makes talking to your friends easier!</p>
@@ -96,11 +96,7 @@ class Greeting extends React.Component {
                             </div>
                             <div id='nav2-bar'>
                                 <div id='nav2'>
-                                    <Link id='nav-btn2' to='/'>Download</Link>
-                                    <Link id='nav-btn2' to='/login'>Why Discord?</Link>
-                                    <Link id='nav-btn2' to='/register'>Nitro</Link>
-                                    <Link id='nav-btn2' to='/login'>Safety</Link>
-                                    <Link id='nav-btn2' to='/'>Support</Link>
+                                    <a id='nav-btn2' href="https://github.com/keychained">Kishub</a>
                                     <Link to='/'><img id='logo2' src={window.logo}></img></Link>
                                 </div>
                             </div>

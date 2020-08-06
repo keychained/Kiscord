@@ -9,14 +9,20 @@ class Server extends React.Component {
    }
 
    render() {
+    const { currentUser, signout } = this.props
        return(
             <div id='server-background'>
                 <div id='server-bar'>
-                   <Link to='/channels/@me'><img id='logo-only' src={window.logoOnly}></img></Link>
+                   <Link id='logo-cont' to='/channels/@me'><img id='logo-only' src={window.logoOnly}></img><span id='logo-tip'>Home</span></Link>
                 </div>
-                <div id='message-bar'>
-                    <input id='find-convo' type="text" placeholder='Find or start a conversation'></input>
-                </div>
+                    <div id='message-bar'>
+                        <input id='find-convo' type="text" placeholder='Find or start a conversation'></input>
+                            <div id='user-bar'>
+                                <img id='logo-only2' src={window.logoOnly}></img>
+                                <p id='username'>{currentUser.username}</p>
+                                <i id='gear-icon' onClick={signout} className="fa fa-gear fa-lg"><span id='gear-tip'>Logout</span></i>
+                            </div>
+                    </div>
             </div>
        )
    }

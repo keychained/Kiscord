@@ -1,0 +1,128 @@
+#server-background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #36393f;
+}
+
+#server-bar {
+    position: absolute;
+    width: 72px;
+    height: 100vh;
+    background-color: #202225;
+}
+
+#logo-only {
+    position: relative;
+    width: 60%;
+    top: 10px;
+    left: 14px;
+}
+
+#logo-tip {
+    visibility: hidden;
+    position: absolute;
+    padding-top: 8px;
+    top: 12px;
+    left: 80px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: black;
+    border-radius: 4px;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+}
+
+#logo-cont:hover #logo-tip {
+    visibility: visible;
+    z-index: 1;
+}
+
+#logo-cont #logo-tip::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 40%;
+    margin-top: 0px;
+    left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 6px solid black;
+}
+
+#message-bar {
+    position: absolute;
+    width: 240px;
+    height: 100vh;
+    left: 72px;
+    background-color: #2f3136
+}
+
+#find-convo {
+    position: relative;
+    width: 85%;
+    top: 9px;
+    left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: none;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: #202225;
+    border: none;
+    height: 19px;
+    width: 88%;
+    color: #4f545c;
+    text-align: left;
+    outline: none;
+}
+
+
+#user-bar {
+    position: absolute;
+    width: 100%;
+    height: 53px;
+    bottom: 0px;
+    background-color: #292b2f;
+}
+
+#username {
+    position: relative;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    top: 15px;
+    left: 60px;
+}
+
+#logo-only2 {
+    position: absolute;
+    width: 15%;
+    top: 12px;
+    left: 12px;
+}
+
+#gear-icon {
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    color: #b9bbbe;
+    cursor: pointer;
+}
+
+#gear-tip {
+    visibility: hidden;
+    position: absolute;
+    bottom: 10px;
+    left: 45px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #f04747;
+}
+
+#gear-icon:hover #gear-tip {
+    visibility: visible;
+}

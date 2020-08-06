@@ -27,11 +27,7 @@ class Greeting extends React.Component {
                 <div id='home-background'>
                     {display}
                     <div id='nav'>
-                        <Link id='nav-btn' to='/'>Download</Link>
-                        <Link id='nav-btn' to='/login'>Why Discord?</Link>
-                        <Link id='nav-btn' to='/register'>Nitro</Link>
-                        <Link id='nav-btn' to='/login'>Safety</Link>
-                        <Link id='nav-btn' to='/'>Support</Link>
+                        <a href></a>
                     </div>
                     <h1 id='homepage-welcome1'>Your place to Talk</h1>
                     <p id='homepage-welcome2'>Kiscord makes talking to your friends easier!</p>

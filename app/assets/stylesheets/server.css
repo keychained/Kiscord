@@ -1,20 +1,21 @@
 #server-background {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: #36393f;
+    overflow: hidden;
 }
 
 #no-friends {
     position: absolute;
-    left: 40%;
-    bottom: 20%;
+    left: 37.4%;
+    bottom: 34.5%;
 }
 
 #server-bar {
     position: absolute;
     width: 72px;
-    height: 100vh;
+    height: 100%;
     background-color: #202225;
 }
 
@@ -64,7 +65,7 @@
 #message-bar {
     position: absolute;
     width: 240px;
-    height: 100vh;
+    height: 100%;
     left: 72px;
     background-color: #2f3136
 }
@@ -132,3 +133,63 @@
 #gear-icon:hover #gear-tip {
     visibility: visible;
 }
+
+#friend-bar-cont {
+    position: absolute;
+    width: 100%;
+    height: 48px;
+}
+
+#friend-bar {
+    position: relative;
+    width: 100%;
+    left: 312px;
+    height: 48px;
+}
+
+#friend-icon {
+    position: absolute;
+    left: 15px;
+    z-index: 1;
+}
+
+#friend-icon-label {
+    position: relative;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    bottom: 17px;
+    left: 30px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#friend-list {
+    position: relative;
+    top: 15px;
+    z-index: 1;
+}
+
+#friend-btns {
+    position: relative;
+}
+
+#friend-list-btn {
+    position: relative;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #B9BBBE;
+    margin: 16px;
+    left: 120px;
+}
+
+#friend-list-btn-special {
+    position: relative;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #43B581;
+    margin: 13px;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background-color: #43B58133;
+    left: 120px;
+}
+
+

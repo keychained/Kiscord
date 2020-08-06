@@ -9,6 +9,18 @@
     z-index: 1;
 }
 
+#kishub1 {
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+#kishub2 {
+    position: relative;
+    top: 69px;
+    left: 20px;
+}
+
 #nav #nav-btn {
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 450;

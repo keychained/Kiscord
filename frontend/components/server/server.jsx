@@ -13,6 +13,20 @@ class Server extends React.Component {
        return(
             <div id='server-background'>
                <img id='no-friends' src={window.noFriends}></img>
+                    <div id='friend-bar-cont'>
+                        <div id='friend-bar'>
+                                <div id='friend-list'>
+                                    <div id='friend-btns'>
+                                        <i id='friend-icon' className="fa fa-users fa-lg"><p id='friend-icon-label'>Friends</p></i>
+                                        <Link id='friend-list-btn' to='/channels/@me'>Online</Link>
+                                        <Link id='friend-list-btn' to='/channels/@me'>All</Link>
+                                        <Link id='friend-list-btn' to='/channels/@me'>Pending</Link>
+                                        <Link id='friend-list-btn' to='/channels/@me'>Blocked</Link>
+                                        <Link id='friend-list-btn-special' to='/channels/@me'>Add Friend</Link>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                 <div id='server-bar'>
                    <Link id='logo-cont' to='/channels/@me'><img id='logo-only' src={window.logoOnly}></img><span id='logo-tip'>Home</span></Link>
                 </div>

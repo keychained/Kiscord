@@ -5,6 +5,12 @@
     background-color: #36393f;
 }
 
+#no-friends {
+    position: absolute;
+    left: 40%;
+    bottom: 20%;
+}
+
 #server-bar {
     position: absolute;
     width: 72px;

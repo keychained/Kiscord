@@ -12,6 +12,7 @@ class Server extends React.Component {
     const { currentUser, signout } = this.props
        return(
             <div id='server-background'>
+               <img id='no-friends' src={window.noFriends}></img>
                 <div id='server-bar'>
                    <Link id='logo-cont' to='/channels/@me'><img id='logo-only' src={window.logoOnly}></img><span id='logo-tip'>Home</span></Link>
                 </div>

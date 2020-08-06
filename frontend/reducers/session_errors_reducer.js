@@ -16,7 +16,7 @@ const SessionErrorsReducer = (state = [], action) => {
         case RECEIVE_CURRENT_USER:
             return [];
         case RECEIVE_SESSION_ERRORS:
-            if (action.errors[0] === 'Invalid Email') {
+            if (action.errors[0] === "Invalid Email") {
                 newState['email'] = action.errors[0]
                 newState['password'] = action.errors[1]
             } else {

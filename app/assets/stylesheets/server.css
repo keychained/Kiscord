@@ -145,32 +145,67 @@
     width: 100%;
     left: 312px;
     height: 48px;
+    background-color: #36393f;
+    z-index: 1;
+    border-bottom: 1px solid #2F3136;
 }
 
 #friend-icon {
     position: absolute;
     left: 15px;
     z-index: 1;
+    color: #72767d;
 }
 
 #friend-icon-label {
     position: relative;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #FFFFFF;
-    bottom: 17px;
+    bottom: 20px;
     left: 30px;
     font-size: 15px;
     font-weight: 600;
+    border-right: 1px solid hsla(0,0%,100%,0.06);
+    padding-right: 16px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
 
 #friend-list {
     position: relative;
     top: 15px;
     z-index: 1;
+    width: 87%;
+}
+
+#comment-icon {
+    position: relative;
+    left: 76.5%;
+    color: #b9bbbe;
+    border-right: 1px solid hsla(0,0%,100%,0.06);
+    padding-right: 21px;
+    padding-top: 8px;
+    top: -5px;
+
+}
+
+#inbox-icon {
+    position: relative;
+    left: 77.5%;
+    color: #b9bbbe;
+    top: -5px;
+}
+
+#help-icon {
+    position: relative;
+    left: 78.7%;
+    color: #b9bbbe;
+    top: -5px;
 }
 
 #friend-btns {
     position: relative;
+    width: 87%;
 }
 
 #friend-list-btn {
@@ -179,6 +214,7 @@
     color: #B9BBBE;
     margin: 16px;
     left: 120px;
+    top: 1px;
 }
 
 #friend-list-btn-special {
@@ -190,6 +226,58 @@
     border-radius: 4px;
     background-color: #43B58133;
     left: 120px;
+    top: 1px;
 }
 
+#active-bar {
+    position: relative;
+    background-color: #2F3136;
+    height: 100%;
+    width: 420px;
+    left: 78.1%;
+}
 
+#add-friend {
+    position: absolute;
+    top: 49px;
+    left: 312px;
+    width: 1188px;
+    height: 157px;
+    border-bottom: 1px solid #2F3136;
+}
+
+#add-friend-label {
+    position: relative;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+#add-friend-label2 {
+    position: relative;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+#add-friend-input {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #292b2f;
+    border-radius: 7px;
+    size: 40px;
+    resize: vertical;
+    height: 55px;
+    outline: none;
+    color: #FFFFFF;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-top: 15px;
+    margin-left: 25px;
+    width: 94%;
+    padding-left: 12px;
+}

@@ -19,6 +19,8 @@ Users can create/login with unique credentials that can be used to access the fu
 
 ## Servers
 
+![](userauth.gif)
+
 Feature to be implemented in the future.
 
 ## Channels

@@ -15,11 +15,11 @@ Kiscord is a clone of the popular live chat/message application Discord. Kiscord
 
 ## User Authentication
 
+![](userauth.gif)
+
 Users can create/login with unique credentials that can be used to access the full functionality of the application. Login/Signup of users check for validations and render the related errors on the page. A demo login is available to check out different features the application has to offer.
 
 ## Servers
-
-![](userauth.gif)
 
 Feature to be implemented in the future.
 

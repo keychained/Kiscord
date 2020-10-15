@@ -60,7 +60,7 @@ class SessionForm extends React.Component {
                                 <div id='label-error'>
                                     {this.props.errors['email'] && (document.querySelector('#email-input-error, #email-input').value.split("@").join("").split(".").length < 2) ? this.props.errors['email'] : this.props.errors['email1'] }
                                 </div>
-                                <input id={this.props.errors['email'] ? 'email-input-error' : 'email-input'} type='text'
+                                <input id={this.props.errors['email'] ? 'email-input-error' : 'email-input'} type='email'
                                     value={this.state.email}
                                     onChange={this.update('email')}
                                     />

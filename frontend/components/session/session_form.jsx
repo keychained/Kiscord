@@ -56,9 +56,9 @@ class SessionForm extends React.Component {
                             ) : (
                                     <h1 id='welcome'>{this.props.formType}</h1>
                             )}
-                            <label id={this.props.errors['email'] && (document.querySelector('#email-input-error, #email-input').value.split("@").join("").split(".").length < 2) ? 'label-session-error' : 'label'}>EMAIL
+                            <label id={this.props.errors['email'] ? 'label-session-error' : 'label'}>EMAIL
                                 <div id='label-error'>
-                                    {this.props.errors['email'] && (document.querySelector('#email-input-error, #email-input').value.split("@").join("").split(".").length < 2) ? this.props.errors['email'] : this.props.errors['email1'] }
+                                    {this.props.errors['email'] ? this.props.errors['email'] : this.props.errors['email1'] }
                                 </div>
                                 <input id={this.props.errors['email'] ? 'email-input-error' : 'email-input'} type='email'
                                     value={this.state.email}
@@ -78,9 +78,9 @@ class SessionForm extends React.Component {
                             ) : (
                                 ""
                             )}
-                            <label id={this.props.errors['password'] && (document.querySelector("#password-input-error, #password-input").value.length < 6) ? 'label-session-error' : 'label'}>PASSWORD
+                            <label id={this.props.errors['password'] ? 'label-session-error' : 'label'}>PASSWORD
                                 <div id='label-error'>
-                                    {this.props.errors['password'] && (document.querySelector('#password-input-error, #password-input').value.length < 6) ? this.props.errors['password'] : "" }
+                                    {this.props.errors['password'] ? this.props.errors['password'] : "" }
                                 </div>
                                 <input id={this.props.errors['password'] ? 'password-input-error' : 'password-input'} type='password'
                                     value={this.state.password}

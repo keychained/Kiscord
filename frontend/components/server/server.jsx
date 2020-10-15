@@ -9,7 +9,7 @@ class Server extends React.Component {
    }
 
    render() {
-    const { currentUser, signout } = this.props
+    const { currentUser, signout, servers } = this.props
        return(
             <div id='server-background'>
                <img id='no-friends' src={window.noFriends}></img>

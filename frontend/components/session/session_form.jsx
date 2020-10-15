@@ -78,11 +78,11 @@ class SessionForm extends React.Component {
                             ) : (
                                 ""
                             )}
-                            <label id={this.props.errors['password'] ? 'label-session-error' : 'label'}>PASSWORD
+                            <label id={this.props.errors['email'] || this.props.errors['password'] ? 'label-session-error' : 'label'}>PASSWORD
                                 <div id='label-error'>
                                     {this.props.errors['password'] ? this.props.errors['password'] : "" }
                                 </div>
-                                <input id={this.props.errors['password'] ? 'password-input-error' : 'password-input'} type='password'
+                                <input id={this.props.errors['email'] || this.props.errors['password'] ? 'password-input-error' : 'password-input'} type='password'
                                     value={this.state.password}
                                     onChange={this.update('password')}
                                 />

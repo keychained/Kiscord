@@ -32,6 +32,7 @@ class Server extends React.Component {
                     </div>
                 <div id='server-bar'>
                    <Link id='logo-cont' to='/channels/@me'><img id='logo-only' src={window.logoOnly}></img><span id='logo-tip'>Home</span></Link>
+                   <p id='add-server'>+</p>
                 </div>
                 <div id='message-bar'>
                 <input id='find-convo' type="text" placeholder='Find or start a conversation'></input>

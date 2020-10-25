@@ -12,6 +12,11 @@
     bottom: 34.5%;
 }
 
+#test {
+    position: relative;
+    background-color: white;
+}
+
 #server-bar {
     position: absolute;
     display: flex;
@@ -36,6 +41,43 @@
     margin: auto;
 }
 
+#add-server-tip {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    padding-top: 8px;
+    top: -2px;
+    left: 60px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: black;
+    border-radius: 4px;
+    width: 70px;
+    height: 38px;
+    text-align: center;
+}
+
+#add-server:hover #add-server-tip {
+    visibility: visible;
+    z-index: 1;
+}
+
+#add-server #add-server-tip::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 40%;
+    margin-top: 0px;
+    left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 6px solid black;
+}
+
 #logo-only {
     position: relative;
     width: 100%;
@@ -45,8 +87,8 @@
     visibility: hidden;
     position: absolute;
     padding-top: 8px;
-    top: 8px;
-    left: 70px;
+    top: -2px;
+    left: 60px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 15px;
     font-weight: 600;

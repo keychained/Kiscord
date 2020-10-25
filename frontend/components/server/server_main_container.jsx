@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import Server from './server';
+import ServerMain from './server_main';
+import { openModal } from '../../actions/modal_actions'
 import { fetchServers, fetchServer } from '../../actions/server_actions';
 import { signout } from '../../actions/session_actions';
 
@@ -12,7 +13,8 @@ const msp = state => ({
 const mdp = dispatch => ({
     getAllServers: () => dispatch(fetchServers()),
     getServer: serverId => dispatch(fetchServer(serverId)),
-    signout: () => dispatch(signout())
+    signout: () => dispatch(signout()),
+    openModal: (modal) => dispatch(openModal(modal))
 });
 
-export default connect(msp, mdp)(Server);
+export default connect(msp, mdp)(ServerMain);

@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import ServerAddContainer from '../server/server_add_container';
+import ServerCreateContainer from '../server/server_create_container';
 
 function Modal( {modal, closeModal }) {
     if (!modal) {
@@ -12,6 +13,9 @@ function Modal( {modal, closeModal }) {
     switch (modal) {
         case "serverAdd":
             component = <ServerAddContainer />;
+            break;
+        case "serverCreate":
+            component = <ServerCreateContainer />;
             break;
         default:
             return null;

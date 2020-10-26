@@ -6,7 +6,7 @@ const msp = state => ({
 })
 
 const mdp = dispatch => ({
-    openModal: () => dispatch(openModal('serverAdd')),
+    openModal: (modal) => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal())
 });
 

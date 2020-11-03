@@ -45,7 +45,7 @@ class ServerMain extends React.Component {
                 <div id='server-bar'>
                    <Link id='logo-cont' to='/channels/@me'><img id='logo-only' src={window.logoOnly}></img><span id='logo-tip'>Home</span></Link>
                    <div id='server-list'>{serversList}</div>
-                   <button id='add-server' onClick={() => this.props.openModal('serverAdd')}>+<span id='add-server-tip'>Add a Server</span></button>
+                   <div id='add-server' onClick={() => this.props.openModal('serverAdd')}>+<span id='add-server-tip'>Add a Server</span></div>
                 </div>
                 <div id='message-bar'>
                 <input id='find-convo' type="text" placeholder='Find or start a conversation'></input>

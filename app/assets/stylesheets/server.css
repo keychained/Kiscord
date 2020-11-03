@@ -30,8 +30,8 @@
 #add-server {
     position: relative;
     display: flex;
-    height: 28px;
-    width: 38px;
+    height: 30px;
+    width: 40px;
     align-items: center;
     justify-content: center;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -39,6 +39,7 @@
     background-color: gray;
     border-radius: 10px;
     margin: auto;
+    cursor: pointer;
 }
 
 #add-server-tip {

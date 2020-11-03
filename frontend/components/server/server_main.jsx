@@ -20,7 +20,7 @@ class ServerMain extends React.Component {
    render() {
     const { currentUser, signout, servers } = this.props;
     const serversList = servers.map(server => (
-        <p id="server-list" key={server.id}><p id="server-lists">{server.title}</p></p>
+        <div id="server-list" key={server.id}><p id="server-lists">{server.title}</p></div>
     ))
        return(
             <div id='server-background'>

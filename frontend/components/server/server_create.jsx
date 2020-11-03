@@ -14,6 +14,7 @@ class ServerCreate extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createServer(this.state);
+        this.props.errors.length === 0 ? "" : this.props.closeModal();
     };
 
     update(field) {

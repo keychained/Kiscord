@@ -31,7 +31,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: scroll;
 }
 
 #server-list {
@@ -58,7 +60,7 @@
     text-align: center;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #FFFFFF;
-    font-size: 10px;
+    font-size: 11px;
     background-color: gray;
     border-radius: 10px;
     cursor: pointer;

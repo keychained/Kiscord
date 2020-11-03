@@ -20,7 +20,7 @@ class ServerMain extends React.Component {
    render() {
     const { currentUser, signout, servers } = this.props;
     const serversList = servers.map(server => (
-        <li key={server.id}>{server.title}</li>
+        <p id="server-list" key={server.id}><p id="server-lists">{server.title}</p></p>
     ))
        return(
             <div id='server-background'>
@@ -44,7 +44,7 @@ class ServerMain extends React.Component {
                     </div>
                 <div id='server-bar'>
                    <Link id='logo-cont' to='/channels/@me'><img id='logo-only' src={window.logoOnly}></img><span id='logo-tip'>Home</span></Link>
-                   <div id='server-list'>{serversList}</div>
+                   <div id="server-list-container">{serversList}</div>
                    <div id='add-server' onClick={() => this.props.openModal('serverAdd')}>+<span id='add-server-tip'>Add a Server</span></div>
                 </div>
                 <div id='message-bar'>

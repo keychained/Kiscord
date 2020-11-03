@@ -1,6 +1,6 @@
 import ServerCreate from './server_create';
 import { connect } from 'react-redux';
-import { createServer } from '../../actions/server_actions';
+import { createServer, receiveServerErrors } from '../../actions/server_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 const msp = state => ({
@@ -11,7 +11,8 @@ const msp = state => ({
 const mdp = dispatch => ({
     createServer: server => dispatch(createServer(server)),
     openModal: (modal) => dispatch(openModal(modal)),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    clearErrors: () => dispatch(receiveServerErrors([]))
 });
 
 export default connect(msp, mdp)(ServerCreate);

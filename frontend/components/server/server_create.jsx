@@ -7,6 +7,10 @@ class ServerCreate extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.createServer(this.state);
@@ -31,6 +35,7 @@ class ServerCreate extends React.Component {
                     onChange={this.update('title')}
                     />
                 </label>
+                <p>{this.props.errors}</p>
                 <input type="submit" value="Create"/>
             </form>
             </>

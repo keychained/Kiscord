@@ -8,9 +8,11 @@ class ServerAdd extends React.Component {
     render() {
         return (
             <>
+            <div >
             <p>Create a Server</p>
             <p>Your server is where you and your friends hang out. Make yours and start talking</p>
-            <button onClick={ () => this.props.openModal('serverCreate')}>Create My Own</button>
+            <div onClick={ () => this.props.openModal('serverCreate')}>Create My Own</div>
+            </div>
             </>
         )
     }

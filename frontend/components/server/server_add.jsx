@@ -5,6 +5,10 @@ class ServerAdd extends React.Component {
         super(props);
     }
 
+        componentWillUnmount() {
+        this.props.clearServerErrors();
+    }
+
     render() {
         return (
             <>

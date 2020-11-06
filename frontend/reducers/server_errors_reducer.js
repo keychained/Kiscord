@@ -5,7 +5,7 @@ const ServerErrorsReducer = (state = [], action) => {
 
     switch (action.type) {
         case RECEIVE_SERVER:
-            return [];
+            return ["Server Creation Successful!"];
         case RECEIVE_SERVER_ERRORS:
             return action.errors
         case CLEAR_SERVER_ERRORS:

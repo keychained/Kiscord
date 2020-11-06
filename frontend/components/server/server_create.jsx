@@ -11,11 +11,18 @@ class ServerCreate extends React.Component {
     //     this.props.clearServerErrors();
     // }
 
+   componentDidMount() {
+       this.props.getAllServers();
+    //    this.props.clearServerErrors();
+   }
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.createServer(this.state);
-        // this.props.createServer(this.state) ? this.props.openModal('serverCreate') : this.props.closeModal() ;
-        this.props.errors.length === 0 ? "" : this.props.closeModal();
+        // if (this.props.errors.length === 0) {
+        //     return this.props.closeModal();
+        // }
+        // this.props.errors[0] !== "Title has already been taken" ? this.props.closeModal() : "";
     };
 
     update(field) {

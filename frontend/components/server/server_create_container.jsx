@@ -12,7 +12,7 @@ const mdp = dispatch => ({
     createServer: server => dispatch(createServer(server)),
     openModal: (modal) => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),
-    clearErrors: () => dispatch(receiveServerErrors([]))
+    clearServerErrors: () => dispatch(receiveServerErrors([]))
 });
 
 export default connect(msp, mdp)(ServerCreate);

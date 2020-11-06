@@ -7,13 +7,14 @@ class ServerCreate extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    componentWillUnmount() {
-        this.props.clearErrors();
-    }
+    // componentWillUnmount() {
+    //     this.props.clearServerErrors();
+    // }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.createServer(this.state);
+        // this.props.createServer(this.state) ? this.props.openModal('serverCreate') : this.props.closeModal() ;
         this.props.errors.length === 0 ? "" : this.props.closeModal();
     };
 

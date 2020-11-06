@@ -37,7 +37,7 @@ class ServerCreate extends React.Component {
                     onChange={this.update('title')}
                     />
                 </label>
-                {/* <p>{this.props.errors}</p> */}
+                <p>{this.props.errors}</p>
                 <input type="submit" value="Create"/>
             </form>
             </>

@@ -12,6 +12,9 @@ class User < ApplicationRecord
         primary_key: :id,
         foreign_key: :user_id,
         class_name: 'Server'
+    
+    has_many :channels,
+        through: :servers
 
     def password=(password)
         @password = password

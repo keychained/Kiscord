@@ -20,7 +20,7 @@ def index
         if @channel.save
             render :show
         else
-            render json: @channels.errors.full_messages, status: 422
+            render json: @channel.errors.full_messages, status: 422
         end
     end
 

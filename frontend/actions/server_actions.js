@@ -34,14 +34,14 @@ export const fetchServers = () => dispatch => (
     ServerAPI.fetchServers().then(servers => dispatch(receiveAllServers(servers))).fail((errors => dispatch(receiveServerErrors(errors.responseJSON))))
 );
 
-export const fetchServer = serverId => dispatch (
+export const fetchServer = serverId => dispatch => (
     ServerAPI.fetchServer(serverId).then(server => dispatch(receiveServer(server))).fail((errors => dispatch(receiveServerErrors(errors.responseJSON))))
 );
 
-export const createServer = server => dispatch (
+export const createServer = server => dispatch => (
     ServerAPI.createServer(server).then(server => dispatch(receiveServer(server))).fail((errors => dispatch(receiveServerErrors(errors.responseJSON))))
 );
 
-export const deleteServer = serverId => dispatch (
+export const deleteServer = serverId => dispatch => (
     ServerAPI.deleteServer(serverId).then(() => dispatch(removeServer(serverId))).fail((errors => dispatch(receiveServerErrors(errors.responseJSON))))
 );

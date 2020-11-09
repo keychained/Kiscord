@@ -1,15 +1,27 @@
 import React from 'react';
-import ServerContainer from './server_container';
 import { ProtectedRoute } from '../../util/route_util';
 import { Link } from 'react-router-dom';
 
-class Server extends React.Component {
+class ServerMain extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {};
+        this.handleSubmit = this.handleSubmit.bind(this);
+   }
+
+   handleSubmit(e) {
+       e.preventDefault();
+   }
+
+   componentDidMount() {
+       this.props.getAllServers();
    }
 
    render() {
-    const { currentUser, signout } = this.props
+    const { currentUser, signout, servers } = this.props;
+    const serversList = servers.map(server => (
+        <div id="server-list" key={server.id}><p id="server-lists" key={server.id}>{server.title}</p></div>
+    ))
        return(
             <div id='server-background'>
                <img id='no-friends' src={window.noFriends}></img>
@@ -32,6 +44,8 @@ class Server extends React.Component {
                     </div>
                 <div id='server-bar'>
                    <Link id='logo-cont' to='/channels/@me'><img id='logo-only' src={window.logoOnly}></img><span id='logo-tip'>Home</span></Link>
+                   <div id="server-list-container">{serversList}</div>
+                   <div id='add-server' onClick={() => this.props.openModal('serverAdd')}>+<span id='add-server-tip'>Add a Server</span></div>
                 </div>
                 <div id='message-bar'>
                 <input id='find-convo' type="text" placeholder='Find or start a conversation'></input>
@@ -54,4 +68,4 @@ class Server extends React.Component {
    }
 }
 
-export default Server;
+export default ServerMain;

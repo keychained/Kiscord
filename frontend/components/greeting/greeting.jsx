@@ -61,7 +61,7 @@ class Greeting extends React.Component {
                         </div>
                     </div>
                </div>
-               <div id='chilling2'>
+               {/* <div id='chilling2'>
                     <div id='chilling2-container'>
                         <div id='chilling2-welcome-container'>
                             <h1 id='chilling2-welcome'>Where hanging out is easy</h1>
@@ -69,7 +69,7 @@ class Greeting extends React.Component {
                         </div>
                         <img id='background-chilling2' src={window.backgroundChilling2}></img>
                     </div>
-               </div>
+               </div> */}
                 <div id='chilling3'>
                     <div id='chilling3-container'>
                         <img id='background-chilling3' src={window.backgroundChilling3}></img>

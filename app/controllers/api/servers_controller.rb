@@ -15,11 +15,12 @@ class Api::ServersController < ApplicationController
 
     def create
         @server = Server.new(server_params)
+        @server.user_id = current_user.id
 
         if @server.save
             render :show
         else
-            render json: @server.errors.full_messages
+            render json: @server.errors.full_messages, status: 422
         end
     end
 

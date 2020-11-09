@@ -1,0 +1,22 @@
+#modal-background {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.80);
+    z-index: 2;
+}
+
+#modal-child {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 35%;
+    height: 80%;
+    background-color: white;
+    z-index: 2;
+    border-radius: 5px;
+}

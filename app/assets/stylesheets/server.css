@@ -33,7 +33,11 @@
     flex-direction: column;
     margin-top: 10px;
     margin-bottom: 10px;
-    overflow: scroll;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
 }
 
 #server-list {

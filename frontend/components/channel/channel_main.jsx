@@ -4,17 +4,16 @@ class ChannelMain extends React.Component {
     constructor(props) {
         super(props)
 
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
+   componentDidMount() {
+    this.props.getAllChannels(this.props.match.params.server_id)
    }
 
    render() {
-       return {
-           
-       }
+       return(
+           <div>TEST</div>
+       )
    }
 }
 

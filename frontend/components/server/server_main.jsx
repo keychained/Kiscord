@@ -1,6 +1,8 @@
 import React from 'react';
 import { ProtectedRoute } from '../../util/route_util';
 import { Link } from 'react-router-dom';
+import ChannelMainContainer from '../channel/channel_main_container';
+import ServerMainContainer from '../server/server_main_container';
 
 class ServerMain extends React.Component {
     constructor(props) {
@@ -20,7 +22,7 @@ class ServerMain extends React.Component {
    render() {
     const { currentUser, signout, servers } = this.props;
     const serversList = servers.map(server => (
-        <div id="server-list" key={server.id}><p id="server-lists" key={server.id}>{server.title}</p></div>
+        <div id="server-list" key={server.id}><p id="server-lists" key={server.id}><Link to={`/channels/${server.id}`}>{server.title}</Link></p></div>
     ))
        return(
             <div id='server-background'>
@@ -47,7 +49,7 @@ class ServerMain extends React.Component {
                    <div id="server-list-container">{serversList}</div>
                    <div id='add-server' onClick={() => this.props.openModal('serverAdd')}>+<span id='add-server-tip'>Add a Server</span></div>
                 </div>
-                <div id='message-bar'>
+                <div id='channel-bar'>
                 <input id='find-convo' type="text" placeholder='Find or start a conversation'></input>
                     <div id='user-bar'>
                         <img id='logo-only2' src={window.logoOnly}></img>

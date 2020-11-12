@@ -38,8 +38,8 @@ export const fetchChannel = channelId => dispatch => (
     ChannelAPI.fetchChannel(channelId).then(channel => dispatch(receiveChannel(channel))).fail((errors => dispatch(receiveChannelErrors(errors.responseJSON))))
 );
 
-export const createChannel = (serverId, channel) => dispatch => (
-    ChannelAPI.createChannel(serverId, channel).then(channel => dispatch(receiveChannel(channel))).fail((errors => dispatch(receiveChannelErrors(errors.responseJSON))))
+export const createChannel = channel => dispatch => (
+    ChannelAPI.createChannel(channel).then(channel => dispatch(receiveChannel(channel))).fail((errors => dispatch(receiveChannelErrors(errors.responseJSON))))
 );
 
 export const deleteServer = channelId => dispatch => (

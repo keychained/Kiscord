@@ -2,7 +2,7 @@ class Api::ChannelsController < ApplicationController
     before_action :ensure_logged_in
 
 def index
-        @channels = current_user.servers.channels
+        @channels = Server.find(params[:serverId]).channels
         
         render :index
     end

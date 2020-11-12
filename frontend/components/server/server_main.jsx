@@ -3,6 +3,7 @@ import { ProtectedRoute } from '../../util/route_util';
 import { Link } from 'react-router-dom';
 import ChannelMainContainer from '../channel/channel_main_container';
 import ServerMainContainer from '../server/server_main_container';
+import ChannelMain from '../channel/channel_main';
 
 class ServerMain extends React.Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class ServerMain extends React.Component {
    render() {
     const { currentUser, signout, servers } = this.props;
     const serversList = servers.map(server => (
-        <div id="server-list" key={server.id}><p id="server-lists" key={server.id}><Link to={`/channels/${server.id}`}>{server.title}</Link></p></div>
+        <div id="server-list" key={server.id}><p id="server-lists" key={server.id}><Link id="server-lists" to={`/channels/${server.id}`}>{server.title}</Link></p></div>
     ))
        return(
             <div id='server-background'>

@@ -1,4 +1,5 @@
 import React from "react";
+import { ProtectedRoute, Route } from "../../util/route_util";
 
 class ChannelMain extends React.Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class ChannelMain extends React.Component {
 
    render() {
        return(
-           <div>TEST</div>
+        <div></div>
        )
    }
 }

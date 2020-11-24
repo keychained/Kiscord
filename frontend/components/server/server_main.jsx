@@ -24,7 +24,7 @@ class ServerMain extends React.Component {
     const { currentUser, signout, servers } = this.props;
     const serversList = servers.map(server => (
         <div id="server-list" key={server.id}><p id="server-lists" key={server.id}><Link id="server-lists" to={`/channels/${server.id}`}>{server.title}</Link></p></div>
-    ))
+   ))
        return(
             <div id='server-background'>
                <img id='no-friends' src={window.noFriends}></img>

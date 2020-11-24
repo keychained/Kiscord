@@ -13,6 +13,7 @@ import GreetingContainer from '../components/greeting/greeting_container';
 import ServerMainContainer from '../components/server/server_main_container';
 import Modal from './modal/modal';
 
+
 const App = () => (
     <div>
         <Modal/>
@@ -21,6 +22,7 @@ const App = () => (
             <AuthRoute exact path='/login' component={LogInFormContainer} />
             <AuthRoute exact path='/register' component={SignUpFormContainer} />
             <ProtectedRoute exact path='/channels/@me' component={ServerMainContainer} />
+            <ProtectedRoute exact path={'/channels/:server_id'} component={ServerMainContainer} />
         </Switch>
     </div>
 );

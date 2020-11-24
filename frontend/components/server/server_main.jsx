@@ -21,6 +21,7 @@ class ServerMain extends React.Component {
    }
 
    render() {
+    const serverId = window.location.href.substr(window.location.href.lastIndexOf('/') +1)
     const { currentUser, signout, servers } = this.props;
     const serversList = servers.map(server => (
         <div id="server-list" key={server.id}><p id="server-lists" key={server.id}><Link id="server-lists" to={`/channels/${server.id}`}>{server.title}</Link></p></div>
@@ -51,7 +52,8 @@ class ServerMain extends React.Component {
                    <div id='add-server' onClick={() => this.props.openModal('serverAdd')}>+<span id='add-server-tip'>Add a Server</span></div>
                 </div>
                 <div id='channel-bar'>
-                <input id='find-convo' type="text" placeholder='Find or start a conversation'></input>
+                {Number.isInteger(parseInt(serverId)) ? (<p>{serverId}</p>) : (<input id='find-convo' type="text" placeholder='Find or start a conversation'></input>) }
+                {/* <input id='find-convo' type="text" placeholder='Find or start a conversation'></input> */}
                     <div id='user-bar'>
                         <img id='logo-only2' src={window.logoOnly}></img>
                         <p id='username'>{currentUser.username}</p>

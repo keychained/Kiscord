@@ -23,6 +23,7 @@ const App = () => (
             <AuthRoute exact path='/register' component={SignUpFormContainer} />
             <ProtectedRoute exact path='/channels/@me' component={ServerMainContainer} />
             <ProtectedRoute exact path={'/channels/:server_id'} component={ServerMainContainer} />
+            <ProtectedRoute exact path={'/channels/:server_id/:channel_id'} component={ServerMainContainer} />
         </Switch>
     </div>
 );

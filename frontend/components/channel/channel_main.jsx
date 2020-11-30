@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import { ProtectedRoute, Route } from "../../util/route_util";
 
 class ChannelMain extends React.Component {
@@ -12,8 +13,12 @@ class ChannelMain extends React.Component {
    }
 
    render() {
+       const { channels } = this.props;
+       const channelsList = channels.map(channel => (
+        <div key={channel.id}><p key={channel.id}><Link to={`/channels/${channel.server_id}/${channel.id}`}>{channel.title}</Link></p></div>
+   ));
        return(
-        <div></div>
+        <div>{channelsList}</div>
        )
    }
 }

@@ -22,11 +22,10 @@ class ServerMain extends React.Component {
 
    render() {
     const last = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+    const secondLast = window.location.href.substr(window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/') - 1)) + 1).split('/')[0]
+    const test = parseInt(secondLast)
     const serverId = parseInt(last)
-    const { currentUser, signout, servers } = this.props;
-    const serverTitle = servers.map(server => (
-        <p key={server.id}>{server.title}</p>
-    ))
+    const { currentUser, signout, servers, serversTitle } = this.props;
     const serversList = servers.map(server => (
         <div id="server-list" key={server.id}><p id="server-lists" key={server.id}><Link id="server-lists" to={`/channels/${server.id}`}>{server.title}</Link></p></div>
    ))
@@ -56,7 +55,7 @@ class ServerMain extends React.Component {
                    <div id='add-server' onClick={() => this.props.openModal('serverAdd')}>+<span id='add-server-tip'>Add a Server</span></div>
                 </div>
                 <div id='channel-bar'>
-                {Number.isInteger(serverId) ? (<div><div>{serverTitle[last - 1]}</div><ChannelMainContainer/></div>) : (<input id='find-convo' type="text" placeholder='Find or start a conversation'></input>) }
+                {Number.isInteger(serverId) && Number.isInteger(test) ? (<div><div>{serversTitle[test].title}</div><ChannelMainContainer/></div>) : Number.isInteger(serverId) || Number.isInteger(test) ? (<div><div>{serversTitle[serverId].title}</div><ChannelMainContainer/></div>) : (<input id='find-convo' type="text" placeholder='Find or start a conversation'></input>) }
                     <div id='user-bar'>
                         <img id='logo-only2' src={window.logoOnly}></img>
                         <p id='username'>{currentUser.username}</p>

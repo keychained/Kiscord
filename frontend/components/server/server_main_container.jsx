@@ -7,6 +7,7 @@ import { signout } from '../../actions/session_actions';
 const msp = state => ({
     errors: state.errors.server,
     servers: Object.values(state.entities.servers),
+    serversTitle: state.entities.servers,
     currentUser: state.entities.users[state.session.id]
 });
 

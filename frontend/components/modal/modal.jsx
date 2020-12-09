@@ -3,6 +3,8 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import ServerAddContainer from '../server/server_add_container';
 import ServerCreateContainer from '../server/server_create_container';
+import ChannelAddContainer from '../channel/channel_add_container';
+import ChannelCreateContainer from '../channel/channel_create_container';
 
 function Modal( {modal, closeModal }) {
     if (!modal) {
@@ -16,6 +18,12 @@ function Modal( {modal, closeModal }) {
             break;
         case "serverCreate":
             component = <ServerCreateContainer />;
+            break;
+        case "channelAdd":
+            component = <ChannelAddContainer />;
+            break;
+        case "channelCreate":
+            component = <ChannelCreateContainer />;
             break;
         default:
             return null;

@@ -20,14 +20,13 @@ class ChannelMain extends React.Component {
 
    render() {
        const { channels } = this.props;
-       const serverId = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
        const channelsList = channels.map(channel => (
         <div key={channel.id}><p key={channel.id}><Link to={`/channels/${channel.server_id}/${channel.id}`}>{channel.title}</Link></p></div>
    ));
-        const listLength = channelsList.length
        return(
         <div>
-           {(this.props.match.params.server_id === serverId) ? (<div>{channelsList}</div>) : ""}
+            <div>{channelsList}</div>
+            <div id='add-server' onClick={() => this.props.openModal('channelAdd')}>+<span id='add-server-tip'>Add a Channel</span></div>
         </div>
        )
    }

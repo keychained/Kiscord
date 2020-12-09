@@ -15,7 +15,6 @@ def index
 
     def create
         @channel = Channel.new(channel_params)
-        # @channel.server_id = current_user.servers.id
 
         if @channel.save
             render :show

@@ -9,20 +9,25 @@ class ChannelMain extends React.Component {
     }
 
    componentDidMount() {
-    this.props.getAllChannels(this.props.match.params.server_id);
+        this.props.getAllChannels(this.props.match.params.server_id);
+   }
+
+   componentDidUpdate(prevProps, prevState) {
+       if (prevProps.match.params.server_id !== this.props.match.params.server_id) {
+        this.props.getAllChannels(this.props.match.params.server_id);
+       };
    }
 
    render() {
-       const last = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
-       const channelId = parseInt(last);
        const { channels } = this.props;
+       const serverId = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
        const channelsList = channels.map(channel => (
         <div key={channel.id}><p key={channel.id}><Link to={`/channels/${channel.server_id}/${channel.id}`}>{channel.title}</Link></p></div>
    ));
         const listLength = channelsList.length
        return(
         <div>
-           {listLength > 0 ? (<div>{channelsList}</div>) : ""}
+           {(this.props.match.params.server_id === serverId) ? (<div>{channelsList}</div>) : ""}
         </div>
        )
    }

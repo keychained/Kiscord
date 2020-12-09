@@ -2,31 +2,24 @@ import React from 'react';
 import { ProtectedRoute } from '../../util/route_util';
 import { Link } from 'react-router-dom';
 import ChannelMainContainer from '../channel/channel_main_container';
-import ServerMainContainer from '../server/server_main_container';
-import ChannelMain from '../channel/channel_main';
 
 class ServerMain extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.handleSubmit = this.handleSubmit.bind(this);
-   }
-
-   handleSubmit(e) {
-       e.preventDefault();
    }
 
    componentDidMount() {
        this.props.getAllServers();
-
    }
-   
+
    render() {
     const last = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
     const secondLast = window.location.href.substr(window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/') - 1)) + 1).split('/')[0]
     const secondId = parseInt(secondLast)
     const serverId = parseInt(last)
     const { currentUser, signout, servers, serversTitle } = this.props;
+    if (!servers.length) return null;
     const serversList = servers.map(server => (
         <div id="server-list" key={server.id}><p id="server-lists" key={server.id}><Link id="server-lists" to={`/channels/${server.id}`}>{server.title}</Link></p></div>
    ))

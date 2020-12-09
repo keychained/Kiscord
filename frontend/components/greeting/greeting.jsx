@@ -1,6 +1,5 @@
 import React from 'react';
 import { Redirect, Link } from 'react-router-dom';
-import GreetingContainer from './greeting_container';
 
 class Greeting extends React.Component {
     render() {

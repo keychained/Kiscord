@@ -3,7 +3,7 @@ import React from 'react';
 class ServerCreate extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { title: `${this.props.currentUser.username}'s Server`, userId: this.props.currentUser.id };
+        this.state = { title: `${this.props.currentUser.username}'s Server`, user_id: this.props.currentUser.id };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 

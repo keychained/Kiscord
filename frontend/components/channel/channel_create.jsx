@@ -3,7 +3,7 @@ import React from 'react';
 class ChannelCreate extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { title: "", serverId: "" };
+        this.state = { title: "", server_id: this.props.currentServer };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -11,6 +11,7 @@ class ChannelCreate extends React.Component {
         e.preventDefault();
         this.props.createChannel(this.state);
     };
+
 
     update(field) {
         return e => {
@@ -35,8 +36,8 @@ class ChannelCreate extends React.Component {
                     />
                 </label>
                     <input type="text"
-                    value={Number.isInteger(serverId) && Number.isInteger(secondId) ? secondId : Number.isInteger(serverId) || Number.isInteger(secondId) ? serverId : ""}
-                    onChange={this.update('serverId')}
+                    value={this.state.server_id}
+                    onChange={this.update('server_id')}
                     />
                 <p>{this.props.errors}</p>
                 <input type="submit" value="Create"/>

@@ -5,7 +5,7 @@ class ChannelCreate extends React.Component {
         super(props);
         this.state = { title: "", server_id: "" };
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    };
 
     handleSubmit(e) {
         e.preventDefault();

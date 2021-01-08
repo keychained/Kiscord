@@ -7,7 +7,6 @@ const last = window.location.href.substr(window.location.href.lastIndexOf('/') +
 const secondLast = window.location.href.substr(window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/') - 1)) + 1).split('/')[0]
 const secondId = parseInt(secondLast)
 const serverId = parseInt(last)
-
 const final = Number.isInteger(serverId) && Number.isInteger(secondId) ? secondLast : Number.isInteger(serverId) || Number.isInteger(secondId) ? last : ""
 
 const msp = (state) => ({

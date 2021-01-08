@@ -3,7 +3,7 @@ import React from 'react';
 class ChannelCreate extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { title: "", server_id: this.props.currentServer };
+        this.state = { title: "", server_id: "" };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -12,7 +12,6 @@ class ChannelCreate extends React.Component {
         this.props.createChannel(this.state);
     };
 
-
     update(field) {
         return e => {
             this.setState({ [field]: e.currentTarget.value })
@@ -20,10 +19,12 @@ class ChannelCreate extends React.Component {
     };
 
     render() {
-    const last = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
-    const secondLast = window.location.href.substr(window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/') - 1)) + 1).split('/')[0]
-    const secondId = parseInt(secondLast)
-    const serverId = parseInt(last)
+        const last = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+        const secondLast = window.location.href.substr(window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/') - 1)) + 1).split('/')[0]
+        const secondId = parseInt(secondLast)
+        const serverId = parseInt(last)
+        const final = Number.isInteger(serverId) && Number.isInteger(secondId) ? secondLast : Number.isInteger(serverId) || Number.isInteger(secondId) ? last : ""
+        this.state.server_id = final;
         return (
             <>
             <p>Customize your channel</p>

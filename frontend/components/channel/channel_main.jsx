@@ -21,11 +21,11 @@ class ChannelMain extends React.Component {
    render() {
        const { channels } = this.props;
        const channelsList = channels.map(channel => (
-        <div key={channel.id}><p key={channel.id}><Link to={`/channels/${channel.server_id}/${channel.id}`}>{channel.title}</Link></p></div>
+        <div key={channel.id}><p key={channel.id}><Link id="channels-list" to={`/channels/${channel.server_id}/${channel.id}`}><p id="sign">#</p>{channel.title}</Link></p></div>
    ));
        return(
         <div>
-            <div>{channelsList}</div>
+            <div id="list-container">{channelsList}</div>
             <div id='add-server' onClick={() => this.props.openModal('channelAdd')}>+<span id='add-server-tip'>Add a Channel</span></div>
         </div>
        )

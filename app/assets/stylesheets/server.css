@@ -472,3 +472,74 @@
     font-size: 25px;
     color: rgb(59, 59, 59);
 }
+
+#server-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: rgb(94, 93, 93);
+    font-weight: 500;
+}
+
+#server-name {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#server-name2 {
+    position: relative;
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 36px;
+    font-weight: 200;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #B9BBBE;
+    padding-left: 10px;
+    background-color: #f1f1f1;
+}
+
+#back-create {
+    position: relative;
+    display: flex;
+    height: 70px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 65px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#back {
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+input#create {
+    position: relative;
+    border: 1px solid #677bc4;
+    border-radius: 2px;
+    font-size: 15px;
+    background: #677bc4;
+    cursor: pointer;
+    color: #FFFFFF;
+    width: 30%;
+    height: 45px;
+    border-radius: 3px;
+    justify-content: center;
+    margin-right: 0px;
+}

@@ -28,19 +28,24 @@ class ServerCreate extends React.Component {
         }
         return (
             <>
-            <p>Customize your server</p>
-            <p>Give your new server a personality with a unique name. You can always change it later.</p>
-            <form onSubmit={this.handleSubmit}>
-                <label>Server Name
-                    <input type="text"
-                    placeholder="Server name here"
+            <div id="server-add-container">
+            <p id="close" onClick={ () => this.props.closeModal()}>X</p>
+            <p id="create-server">Customize your server</p>
+            <p id="create-info">Give your new server a personality with a unique name. You can always change it later.</p>
+            <form id="server-form" onSubmit={this.handleSubmit}>
+                <label id="server-name">SERVER NAME
+                    <input id="server-name2" type="text"
                     value={this.state.title}
                     onChange={this.update('title')}
                     />
                 </label>
                 <p>{this.props.errors}</p>
-                <input type="submit" value="Create"/>
+                <div id="back-create">
+                <p id="back">Back</p>
+                <input id="create" type="submit" value="Create"/>
+                </div>
             </form>
+            </div>
             </>
         )
     }

@@ -425,10 +425,22 @@
 
 #create {
     position: relative;
+    display: flex;
+    width: 85%;
+    height: 70px;
+    /* flex-direction: row; */
     font-size: 18px;
     font-weight: 600;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     cursor: pointer;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #B9BBBE;
 }
 
 #close {
@@ -439,4 +451,24 @@
     font-size: 24px;
     cursor: pointer;
     z-index: 3;
+}
+
+#create-logo {
+    position: relative;
+    display: flex;
+    width: 15%;
+    height: 100%;
+    background-image: url('create-server.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    padding-left: 15px;
+}
+
+#create-logo2 {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 25px;
+    color: rgb(59, 59, 59);
 }

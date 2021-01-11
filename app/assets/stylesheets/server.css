@@ -257,8 +257,8 @@
     left: 312px;
     height: 48px;
     background-color: #36393f;
-    z-index: 1;
-    border-bottom: 1px solid #2F3136;
+    z-index: 2;
+    border-bottom: 1px solid rgb(32, 31, 31);
 }
 
 #friend-icon {
@@ -346,6 +346,7 @@
     height: 100%;
     width: 420px;
     left: 78.1%;
+    z-index: 1;
 }
 
 #add-friend {
@@ -354,7 +355,7 @@
     left: 312px;
     width: 1188px;
     height: 157px;
-    border-bottom: 1px solid #2F3136;
+    border-bottom: 1px solid rgb(32, 31, 31);
 }
 
 #add-friend-label {

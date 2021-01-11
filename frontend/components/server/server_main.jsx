@@ -49,7 +49,7 @@ class ServerMain extends React.Component {
                    <div id='add-server' onClick={() => this.props.openModal('serverAdd')}>+<span id='add-server-tip'>Add a Server</span></div>
                 </div>
                 <div id='channel-bar'>
-                {Number.isInteger(serverId) && Number.isInteger(secondId) ? (<div><div>{serversTitle[secondId].title}</div><ChannelMainContainer/></div>) : Number.isInteger(serverId) || Number.isInteger(secondId) ? (<div><div>{serversTitle[serverId].title}</div><ChannelMainContainer/></div>) : (<input id='find-convo' type="text" placeholder='Find or start a conversation'></input>) }
+                {Number.isInteger(serverId) && Number.isInteger(secondId) ? (<div id="channels-container"><div id="server-title">{serversTitle[secondId].title}</div><ChannelMainContainer/></div>) : Number.isInteger(serverId) || Number.isInteger(secondId) ? (<div id="channels-container"><div id="server-title">{serversTitle[serverId].title}</div><ChannelMainContainer/></div>) : (<input id='find-convo' type="text" placeholder='Find or start a conversation'></input>) }
                     <div id='user-bar'>
                         <img id='logo-only2' src={window.logoOnly}></img>
                         <p id='username'>{currentUser.username}</p>

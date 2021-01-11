@@ -39,7 +39,7 @@ class ServerCreate extends React.Component {
                     onChange={this.update('title')}
                     />
                 </label>
-                <p>{this.props.errors}</p>
+                <p id="server-errors">{this.props.errors}</p>
                 <div id="back-create">
                 <p onClick={ () => this.props.openModal('serverAdd')} id="back">Back</p>
                 <input id="create" type="submit" value="Create"/>

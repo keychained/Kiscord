@@ -25,6 +25,9 @@ class ChannelCreate extends React.Component {
         const serverId = parseInt(last)
         const final = Number.isInteger(serverId) && Number.isInteger(secondId) ? secondLast : Number.isInteger(serverId) || Number.isInteger(secondId) ? last : ""
         this.state.server_id = final;
+        if (this.props.errors[0] === "") {
+            this.props.closeModal();
+        }
         return (
             <>
             <p>Customize your channel</p>
@@ -36,7 +39,7 @@ class ChannelCreate extends React.Component {
                     onChange={this.update('title')}
                     />
                 </label>
-                    <input type="text"
+                    <input type="hidden"
                     value={this.state.server_id}
                     onChange={this.update('server_id')}
                     />

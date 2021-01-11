@@ -23,7 +23,7 @@ class ServerCreate extends React.Component {
     };
 
     render() {
-        if (this.props.errors[0] === "Server Creation Successful!") {
+        if (this.props.errors[0] === "") {
             this.props.closeModal();
         }
         return (

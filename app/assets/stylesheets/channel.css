@@ -54,3 +54,73 @@
 #channels-list:hover #sign {
     color: #72767D;
 }
+
+#channel-create-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: #36393f;
+}
+
+#create-channel {
+    position: relative;
+    font-size: 23px;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: white;
+}
+
+#create-info2 {
+    position: relative;
+    color: #494a4d;
+    font-weight: 300;
+    padding-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 120%;
+    color: white;
+}
+
+#channel-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: rgb(94, 93, 93);
+    font-weight: 500;
+}
+
+#channel-name {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 12px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #B9BBBE;
+}
+
+#channel-name2 {
+    position: relative;
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 36px;
+    font-weight: 200;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 25px;
+    background-color: #303236;
+    outline: none;
+    color: white;
+}

@@ -81,9 +81,9 @@
     justify-content: center;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #FFFFFF;
-    background-color: gray;
-    border-radius: 10px;
+    font-size: 20px;
     margin: auto;
+    padding-bottom: 10px;
     cursor: pointer;
 }
 

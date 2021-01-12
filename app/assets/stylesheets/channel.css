@@ -89,9 +89,11 @@
 #channel-form {
     position: relative;
     display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     margin-top: auto;
-    margin-bottom: auto;
+    padding-top: 30%;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: rgb(94, 93, 93);
     font-weight: 500;
@@ -130,7 +132,7 @@
     font-size: 20px;
     color: #B9BBBE;
     left: 34px;
-    top: 32px;
+    top: 167px;
     z-index: 3;
 }
 
@@ -139,9 +141,9 @@
     display: flex;
     height: 70px;
     flex-direction: row;
-    /* justify-content: flex-end; */
+    margin-top: auto;
+    justify-content: flex-end;
     align-items: center;
-    top: 75px;
     background-color: #303236;
     border-radius: 5px;
     padding-left: 20px;

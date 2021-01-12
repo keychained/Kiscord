@@ -124,3 +124,12 @@
     outline: none;
     color: white;
 }
+
+#test {
+    position: absolute;
+    font-size: 20px;
+    color: #B9BBBE;
+    left: 34px;
+    top: 32px;
+    z-index: 3;
+}

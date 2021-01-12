@@ -35,6 +35,7 @@ class ChannelCreate extends React.Component {
             <p id="create-channel">Create Text Channel</p>
             <p id="create-info2">Give your new channel a personality with a unique name. You can always change it later.</p>
             <form id="channel-form" onSubmit={this.handleSubmit}>
+                <p id="test">#</p>
                 <label id="channel-name">CHANNEL NAME
                     <input id="channel-name2" type="text"
                     placeholder="new-channel"

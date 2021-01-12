@@ -35,7 +35,7 @@ class ChannelCreate extends React.Component {
             <p id="create-channel">Create Text Channel</p>
             <p id="create-info2">Give your new channel a personality with a unique name. You can always change it later.</p>
             <form id="channel-form" onSubmit={this.handleSubmit}>
-                <p id="test">#</p>
+                <p id="channel-creation">#</p>
                 <label id="channel-name">CHANNEL NAME
                     <input id="channel-name2" type="text"
                     placeholder="new-channel"
@@ -47,8 +47,11 @@ class ChannelCreate extends React.Component {
                     value={this.state.server_id}
                     onChange={this.update('server_id')}
                     />
-                <p>{this.props.errors}</p>
-                <input type="submit" value="Create"/>
+                <p id="server-errors">{this.props.errors}</p>
+                <div id="back-create-channel">
+                <p onClick={ () => this.props.closeModal()} id="back-channel">Cancel</p>
+                <input id="create-chan" type="submit" value="Create Channel"/>
+                </div>
             </form>
             </div>
             </>

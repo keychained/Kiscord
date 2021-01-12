@@ -125,11 +125,48 @@
     color: white;
 }
 
-#test {
+#channel-creation {
     position: absolute;
     font-size: 20px;
     color: #B9BBBE;
     left: 34px;
     top: 32px;
     z-index: 3;
+}
+
+#back-create-channel {
+    position: relative;
+    display: flex;
+    height: 70px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    top: 75px;
+    background-color: #303236;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#back-channel {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#create-chan {
+    position: relative;
+    border: 1px solid #677bc4;
+    border-radius: 2px;
+    font-size: 15px;
+    background: #677bc4;
+    cursor: pointer;
+    color: #FFFFFF;
+    width: 30%;
+    height: 45px;
+    border-radius: 3px;
+    justify-content: center;
+    margin-right: 0px;
 }

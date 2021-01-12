@@ -93,7 +93,7 @@
     width: 100%;
     flex-direction: column;
     margin-top: auto;
-    padding-top: 30%;
+    padding-top: 60px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: rgb(94, 93, 93);
     font-weight: 500;
@@ -132,7 +132,7 @@
     font-size: 20px;
     color: #B9BBBE;
     left: 34px;
-    top: 167px;
+    top: 92px;
     z-index: 3;
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { ProtectedRoute } from '../../util/route_util';
 import { Link } from 'react-router-dom';
 import ChannelMainContainer from '../channel/channel_main_container';
+import MessageContainer from '.././message/message_container'
 
 class ServerMain extends React.Component {
     constructor(props) {
@@ -18,6 +19,7 @@ class ServerMain extends React.Component {
     const secondLast = window.location.href.substr(window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/', window.location.href.lastIndexOf('/') - 1)) + 1).split('/')[0]
     const secondId = parseInt(secondLast)
     const serverId = parseInt(last)
+    const final = Number.isInteger(serverId) && Number.isInteger(secondId) ? last : Number.isInteger(serverId) || Number.isInteger(secondId) ? "" : ""
     const { currentUser, signout, servers, serversTitle } = this.props;
     if (!servers.length) return null;
     const serversList = servers.map(server => (
@@ -25,6 +27,7 @@ class ServerMain extends React.Component {
    ))
        return(
             <div id='server-background'>
+                {final ? <MessageContainer /> : ""}
                <img id='no-friends' src={window.noFriends}></img>
                     <div id='friend-bar-cont'>
                         <div id='friend-bar'>
@@ -60,7 +63,7 @@ class ServerMain extends React.Component {
 
                 </div>
                 <div id='add-friend'>
-                    <div id='add-friend-label'>ADD FRIEND</div>
+                    <div id='add-friend-label'>{final}</div>
                     <div id='add-friend-label2'>You can add friends here!</div>
                     <input id='add-friend-input' type="text" placeholder='Enter a Username'></input>
                 </div>

@@ -1,9 +1,35 @@
-#test {
+#message-container {
     position: absolute;
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     left: 312px;
-    background-color: white;
+    background-color: #36393f;
     z-index: 3;
+}
+
+#message-channel-title {
+    position: relative;
+    display: flex;
+    height: 48px;
+    width: 100%;
+    border-bottom: 1px solid rgb(32, 31, 31);
+}
+
+#message-window {
+    position: relative;
+    display: flex;
+    height: 85%;
+    width: 100%;
+}
+
+#message-input {
+    position: relative;
+    display: flex;
+    width: 73%;
+    height: 30px;
+    margin-left: 14px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }

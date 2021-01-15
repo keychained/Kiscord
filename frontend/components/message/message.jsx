@@ -7,9 +7,12 @@ class Message extends React.Component {
 
     render() {
         return(
-            <>
-            <div id="test"></div>
-            </>
+            <div id="message-container">
+                <div id="message-channel-title">
+                </div>
+                <div id="message-window"></div>
+                <input id="message-input"></input>
+            </div>
         )
     }
 }

@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import ServerMain from './server_main';
 import { openModal } from '../../actions/modal_actions'
 import { fetchServers, fetchServer } from '../../actions/server_actions';
-// import { fetchChannels, fetchChannel } from "../../actions/channel_actions"
 import { signout } from '../../actions/session_actions';
 
 const msp = state => ({

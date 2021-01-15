@@ -20,8 +20,9 @@ class ChannelMain extends React.Component {
 
    render() {
        const { channels } = this.props;
+       if (!channels.length) return null;
        const channelsList = channels.map(channel => (
-        <div key={channel.id}><p key={channel.id}><Link id="channels-list" to={`/channels/${channel.server_id}/${channel.id}`}><p id="sign">#</p>{channel.title}</Link></p></div>
+        <div key={channel.id}><div key={channel.id}><Link id="channels-list" to={`/channels/${channel.server_id}/${channel.id}`}><div id="sign">#</div>{channel.title}</Link></div></div>
    ));
        return(
         <div>

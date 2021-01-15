@@ -63,7 +63,7 @@ class ServerMain extends React.Component {
 
                 </div>
                 <div id='add-friend'>
-                    <div id='add-friend-label'>{final}</div>
+                    <div id='add-friend-label'>ADD FRIEND</div>
                     <div id='add-friend-label2'>You can add friends here!</div>
                     <input id='add-friend-input' type="text" placeholder='Enter a Username'></input>
                 </div>

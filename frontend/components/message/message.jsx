@@ -6,12 +6,17 @@ class Message extends React.Component {
     }
 
     render() {
+        const { channels } = this.props
+        const last = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+        const channelTitle = channels[last].title
         return(
+            <div id="message-bar">
             <div id="message-container">
-                <div id="message-channel-title">
-                </div>
+            <div id="message-channel-title"><div>#</div>{channelTitle}
+            </div>
                 <div id="message-window"></div>
                 <input id="message-input"></input>
+            </div>
             </div>
         )
     }

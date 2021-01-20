@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Message from './message';
 import { fetchChannels } from "../../actions/channel_actions";
 import { fetchServers } from "../../actions/server_actions";
 
 
 const msp = state => ({
-    channels: state.entities.channels
+    channels: state.entities.channels,
 });
 
 const mdp = dispatch => ({
@@ -13,4 +14,4 @@ const mdp = dispatch => ({
     getAllServers: () => dispatch(fetchServers()),
 });
 
-export default connect(msp, mdp)(Message);
+export default withRouter(connect(msp, mdp)(Message));

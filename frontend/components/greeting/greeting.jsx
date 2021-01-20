@@ -27,7 +27,7 @@ class Greeting extends React.Component {
                 <div id='home-background'>
                     {display}
                     <div id='nav'>
-                        <i id='kishub1' className="fa fa-linkedin"></i><a id='nav-btn' href="https://github.com/keychained">Linkedin</a>
+                        <i id='kishub1' className="fa fa-linkedin"></i><a id='nav-btn' href="https://www.linkedin.com/in/kihoonchoi/">Linkedin</a>
                         <i id='kishub1' className='fa fa-github fa-lg'></i><a id='nav-btn' href="https://github.com/keychained">Github</a>
                     </div>
                     <h1 id='homepage-welcome1'>Your place to Talk</h1>

@@ -13,7 +13,7 @@ class Server < ApplicationRecord
 
     has_many :memberships,
         foreign_key: :server_id,
-        className: 'ServerMember'
+        class_name: 'ServerMember'
 
     has_many :members,
         through: :memberships

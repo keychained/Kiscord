@@ -3,9 +3,9 @@ class ServerMember < ApplicationRecord
 
     belongs_to :member,
         foreign_key: :member_id,
-        className: 'User'
+        class_name: 'User'
 
     belongs_to :server,
         foreign_key: :server_id,
-        className: 'Server'
+        class_name: 'Server'
 end

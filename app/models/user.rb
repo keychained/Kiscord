@@ -15,13 +15,14 @@ class User < ApplicationRecord
 
     has_many :server_members,
         foreign_key: :member_id,
-        className: 'ServerMember'
+        class_name: 'ServerMember'
 
     has_many :subscribed_servers,
-        through: :server_members,
+        through: :server_members
     
     has_many :channels,
         through: :servers
+
 
     def password=(password)
         @password = password

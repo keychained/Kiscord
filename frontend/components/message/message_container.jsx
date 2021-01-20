@@ -7,6 +7,7 @@ import { fetchServers } from "../../actions/server_actions";
 
 const msp = state => ({
     channels: state.entities.channels,
+    channelsList: Object.values(state.entities.channels),
 });
 
 const mdp = dispatch => ({

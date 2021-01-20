@@ -5,19 +5,9 @@ class Message extends React.Component {
         super(props);
     }
 
-    componentDidMount() {
-        this.props.getAllChannels(this.props.match.params.server_id)
-    }
-
-   componentDidUpdate(prevProps, prevState) {
-       if (prevProps.match.params.channel_id !== this.props.match.params.channel_id) {
-        this.props.getAllChannels(this.props.match.params.server_id);
-       };
-   }
-
     render() {
-        const { channels } = this.props
-        if (!channels.length) return null;
+        const { channels, channelsList } = this.props
+        if (!channelsList.length) return null;
         const last = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
         const channelTitle = channels[last].title
         return(

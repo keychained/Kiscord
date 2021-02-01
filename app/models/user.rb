@@ -9,16 +9,15 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     has_many :servers,
-        primary_key: :id,
         foreign_key: :user_id,
         class_name: 'Server'
 
-    has_many :server_members,
+    has_many :server_memberships,
         foreign_key: :member_id,
         class_name: 'ServerMember'
 
     has_many :subscribed_servers,
-        through: :server_members
+        through: :server_memberships
     
     has_many :channels,
         through: :servers

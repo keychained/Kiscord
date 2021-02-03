@@ -26,7 +26,7 @@ export const demoUser = () => (
         method: 'POST',
         url: '/api/session',
         data: { user: {
-            username: 'demodemo', email: 'demodemo', password: 'password'
+            username: 'demo', email: 'demodemo@demo.com', password: 'password'
         }}
     })
 );

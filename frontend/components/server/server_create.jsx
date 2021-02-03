@@ -3,7 +3,7 @@ import React from 'react';
 class ServerCreate extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { title: `${this.props.currentUser.username}'s Server`, user_id: this.props.currentUser.id, inviteCode: Math.random().toString(18).toUpperCase().slice(5) };
+        this.state = { title: `${this.props.currentUser.username}'s Server`, user_id: this.props.currentUser.id, invite_code: Math.random().toString(18).toUpperCase().slice(5) };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 

@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
-    has_many :servers,
+    has_many :own_servers,
         foreign_key: :user_id,
         class_name: 'Server'
 
@@ -19,8 +19,8 @@ class User < ApplicationRecord
     has_many :subscribed_servers,
         through: :server_memberships
     
-    has_many :channels,
-        through: :servers
+    has_many :own_channels,
+        through: :own_servers
 
 
     def password=(password)

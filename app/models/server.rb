@@ -1,5 +1,5 @@
 class Server < ApplicationRecord
-    validates :title, presence: true, uniqueness: true
+    validates :title, presence: true
 
     belongs_to :user,
         foreign_key: :user_id,

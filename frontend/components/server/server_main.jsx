@@ -21,7 +21,7 @@ class ServerMain extends React.Component {
     const serverId = parseInt(last)
     const final = Number.isInteger(serverId) && Number.isInteger(secondId) ? last : Number.isInteger(serverId) || Number.isInteger(secondId) ? "" : ""
     const { currentUser, signout, servers, serversTitle } = this.props;
-    // if (!servers.length) return null;
+    if (!servers.length) return null;
     const serversList = servers.map(server => (
         <div id="server-list" key={server.id}><p id="server-lists" key={server.id}><Link id="server-lists" to={`/channels/${server.id}`}>{server.title}</Link></p></div>
    ))

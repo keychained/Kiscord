@@ -46,7 +46,7 @@ class Api::ServersController < ApplicationController
         @server = current_user.find_by(id: params[:id])
 
         if @server
-            @server.destroy
+           @server.destroy
         else
             render json: ["Cant delete server!"], status: 404
         end

@@ -174,3 +174,55 @@
     margin-right: 0px;
     outline: none;
 }
+
+#invite-code {
+    position: relative;
+    display: flex;
+    height: 30px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: auto;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+#invite-code-tip {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    padding-top: 8px;
+    top: -2px;
+    left: 60px;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: black;
+    border-radius: 4px;
+    width: 70px;
+    height: 38px;
+    text-align: center;
+}
+
+#invite-code:hover #invite-code-tip {
+    visibility: visible;
+    z-index: 1;
+}
+
+#invite-code #invite-code-tip::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 40%;
+    margin-top: 0px;
+    left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 6px solid black;
+}

@@ -45,3 +45,11 @@ export const createServer = server => dispatch => (
 export const deleteServer = serverId => dispatch => (
     ServerAPI.deleteServer(serverId).then(() => dispatch(removeServer(serverId))).fail((errors => dispatch(receiveServerErrors(errors.responseJSON))))
 );
+
+export const joinServer = inviteCode => dispatch => (
+    ServerAPI.joinServers(inviteCode).then(server => dispatch(receiveServer(server))).fail((errors => dispatch(receiveServerErrors(errors.responseJSON))))
+);
+
+export const leaveServer = serverId => dispatch => (
+    ServerAPI.leaveServers(serverId).then(serverId => dispatch(removeServer(serverId))).fail(errors => dispatch(receiveServerErrors(errors.responseJSON)))
+);

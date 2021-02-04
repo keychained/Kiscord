@@ -12,6 +12,22 @@ export const fetchServer = serverId => (
     })
 );
 
+export const joinServers = inviteCode => (
+    $.ajax({
+    method: 'POST',
+    url: 'api/servers/join',
+    data: inviteCode
+  })
+);
+
+export const leaveServers = serverId => (
+    $.ajax({
+    method: 'DELETE',
+    url: 'api/servers',
+    data: { serverId }
+  })
+);
+
 export const createServer = server => (
     $.ajax({
         method: 'POST',

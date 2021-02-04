@@ -2,7 +2,8 @@ class Api::ServersController < ApplicationController
     before_action :ensure_logged_in
 
     def index
-        @servers = current_user.own_servers
+        @servers = current_user.servers
+        / @servers += current_user.subscribed_servers /
         
         render :index
     end

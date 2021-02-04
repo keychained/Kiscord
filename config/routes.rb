@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :index, :create]
     resources :servers, only: [:index, :show, :create, :destroy]
     resources :channels, only: [:index, :show, :create, :destroy]
+    post 'servers/join', to: 'servers#join'
+    delete 'servers', to: 'servers#leave'
+    
     resource :session, only: [:create, :destroy]
   end
   # For details on the DSL a vailable within this file, see http://guides.rubyonrails.org/routing.html

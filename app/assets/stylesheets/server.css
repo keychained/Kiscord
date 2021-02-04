@@ -548,3 +548,12 @@ input#create {
 #server-errors {
     color: red;
 }
+
+#invite {
+    position: relative;
+    display: flex;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+}

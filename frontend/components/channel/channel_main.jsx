@@ -27,7 +27,7 @@ class ChannelMain extends React.Component {
         <div>
             <div id="list-container">{channelsList}</div>
             <div id='add-server' onClick={() => this.props.openModal('channelCreate')}>+<span id='add-server-tip'>Create Channel</span></div>
-            <div id='invite-code' onClick={() => this.props.openModal('channelCreate')}>Invite Code<span id='invite-code-tip'>Get Invite Code!</span></div>
+            <div id='invite-code' onClick={() => this.props.openModal('inviteCode')}>Invite Code<span id='invite-code-tip'>Get Invite Code!</span></div>
         </div>
        )
    }

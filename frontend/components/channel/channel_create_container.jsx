@@ -10,7 +10,7 @@ const msp = (state) => ({
 });
 
 const mdp = dispatch => ({
-    getAllChannels: serverId => dispatch(fetchChannels(serverId)),
+    // getAllChannels: serverId => dispatch(fetchChannels(serverId)),
     createChannel: channel => dispatch(createChannel(channel)),
     openModal: (modal) => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),

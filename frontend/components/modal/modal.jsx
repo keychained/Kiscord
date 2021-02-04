@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import ServerAddContainer from '../server/server_add_container';
 import ServerCreateContainer from '../server/server_create_container';
 import ChannelCreateContainer from '../channel/channel_create_container';
+import ServerCodeContainer from '../server/server_code_container';
 
 function Modal( {modal, closeModal }) {
     if (!modal) {
@@ -20,6 +21,9 @@ function Modal( {modal, closeModal }) {
             break;
         case "channelCreate":
             component = <ChannelCreateContainer />;
+            break;
+        case "inviteCode":
+            component = <ServerCodeContainer />;
             break;
         default:
             return null;

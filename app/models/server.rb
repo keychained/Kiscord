@@ -14,5 +14,6 @@ class Server < ApplicationRecord
         class_name: 'ServerMember'
 
     has_many :members,
-        through: :memberships
+        through: :memberships,
+        source: :member
 end

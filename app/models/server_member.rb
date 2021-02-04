@@ -1,5 +1,5 @@
 class ServerMember < ApplicationRecord
-    validates :member_id, presence: true, uniqueness: true
+    validates :member_id, uniqueness: { scope: :server_id }
 
     belongs_to :member,
         foreign_key: :member_id,

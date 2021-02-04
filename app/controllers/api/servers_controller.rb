@@ -3,7 +3,7 @@ class Api::ServersController < ApplicationController
 
     def index
         @servers = current_user.servers
-        / @servers += current_user.subscribed_servers /
+        @servers += current_user.subscribed_servers
         
         render :index
     end

@@ -17,7 +17,8 @@ class User < ApplicationRecord
         class_name: 'ServerMember'
 
     has_many :subscribed_servers,
-        through: :server_memberships
+        through: :server_memberships,
+        source: :server
     
     has_many :channels,
         through: :servers

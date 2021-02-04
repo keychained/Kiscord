@@ -12,6 +12,10 @@ class ChannelCreate extends React.Component {
         this.props.createChannel(this.state);
     };
 
+    componentWillUnmount() {
+        this.props.clearChannelErrors();
+    }
+
     update(field) {
         return e => {
             this.setState({ [field]: e.currentTarget.value })

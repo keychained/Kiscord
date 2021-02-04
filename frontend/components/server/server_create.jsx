@@ -11,6 +11,10 @@ class ServerCreate extends React.Component {
        this.props.getAllServers();
    }
 
+   componentWillUnmount() {
+       this.props.clearServerErrors();
+   }
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.createServer(this.state);

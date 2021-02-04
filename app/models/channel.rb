@@ -1,5 +1,5 @@
 class Channel < ApplicationRecord
-    validates :title, :server_id, presence: true
+    validates :title, presence: true, uniqueness: { scope: :server_id }
 
     belongs_to :server,
         foreign_key: :server_id,

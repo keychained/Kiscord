@@ -155,8 +155,8 @@ class SessionForm extends React.Component {
                       DATE OF BIRTH
                       <div id="date-input">
                         <span>
-                          <select id="month-input" name="month">
-                            <option value="" disabled selected>
+                          <select defaultValue={'DEFAULT'} id="month-input" name="month">
+                            <option value="DEFAULT" disabled hidden>
                               Month
                             </option>
                             <option value="01">January</option>
@@ -174,8 +174,8 @@ class SessionForm extends React.Component {
                           </select>
                         </span>
                         <span>
-                          <select id="day-input" name="day">
-                            <option value="" disabled selected>
+                          <select defaultValue={'DEFAULT'} id="day-input" name="day">
+                            <option value="DEFAULT" disabled hidden>
                               Day
                             </option>
                             <option value="01">1</option>
@@ -212,8 +212,8 @@ class SessionForm extends React.Component {
                           </select>
                         </span>
                         <span>
-                          <select id="year-input" name="year">
-                            <option value="" disabled selected>
+                          <select defaultValue={'DEFAULT'} id="year-input" name="year">
+                            <option value="DEFAULT" disabled hidden>
                               Year
                             </option>
                             <option value="2018">2018</option>

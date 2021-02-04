@@ -23,10 +23,10 @@ const SessionErrorsReducer = (state = [], action) => {
                 newState['password'] = action.errors[0]
                 newState["error"] = action.errors[1];
             } else {
-                // action.errors.forEach(error => {
-                //     let key = errorMsgs[error]
-                //     newState[key] = error
-                // });
+                action.errors.forEach(error => {
+                    let key = errorMsgs[error]
+                    newState[key] = error
+                });
             }
             return newState;
         case CLEAR_SESSION_ERRORS:

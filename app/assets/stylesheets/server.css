@@ -556,4 +556,24 @@ input#create {
     text-align: center;
     text-decoration: none;
     outline: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 36px;
+    font-weight: 500;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    background-color: #303236;
+    outline: none;
+    color: white;
+}
+
+
+#enter-code {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }

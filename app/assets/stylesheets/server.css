@@ -569,11 +569,61 @@ input#create {
     color: white;
 }
 
-
 #enter-code {
     position: relative;
     display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    margin-top: auto;
+}
+
+#code-form {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#code-back-join {
+    position: relative;
+    display: flex;
+    height: 70px;
+    width: 100%;
+    flex-direction: row;
+    margin-top: auto;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #303236;
+    border-radius: 5px;
+}
+
+#code-back {
+    position: relative;
+    display: flex;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#code-join {
+    position: relative;
+    display: flex;
+    border: 1px solid #677bc4;
+    border-radius: 2px;
+    font-size: 15px;
+    background: #677bc4;
+    cursor: pointer;
+    color: #FFFFFF;
+    height: 45px;
+    border-radius: 3px;
+    justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: 20px;
+    outline: none;
 }

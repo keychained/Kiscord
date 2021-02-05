@@ -31,7 +31,7 @@ class Api::ServersController < ApplicationController
         @server = Server.find_by(invite_code: params[:inviteCode])
     
         if @server
-            if current_user.servers.include?(@server)
+            if (current_user.servers.include?(@server) || current_user.subscribed_servers.include?(@server))
                 render json: ["Already a part of this server!"], status: 422
             else
                 ServerMember.create({member_id: current_user.id, server_id: @server.id})

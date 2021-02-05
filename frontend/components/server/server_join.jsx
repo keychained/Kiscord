@@ -35,9 +35,9 @@ class ServerJoin extends React.Component {
                 <p id="create-channel">Join Server</p>
                 <p id="create-info2">Enter your invite code below and join the server!</p>
                 <form id="code-form" onSubmit={ this.handleSubmit }>
-                <p id="server-errors">{this.props.errors}</p>
                 <div id="enter-code">
                  <input id="channel-name2" placeholder="Enter code here" onChange={this.handleChange('inviteCode')}></input>               
+                <p id="server-errors">{this.props.errors}</p>
                 <div id="code-back-join">
                     <p onClick={ () => this.props.closeModal()} id="code-back">Cancel</p>
                     <input id="code-join" type="submit" value="Join"/>

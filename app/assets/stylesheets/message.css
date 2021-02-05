@@ -1,6 +1,6 @@
 #message-bar {
     position: absolute;
-    width: 100%;
+    width: 59.2%;
     height: 100%;
     left: 312px;
     background-color: #36393f;
@@ -34,7 +34,7 @@
 #message-input {
     position: relative;
     display: flex;
-    width: 73%;
+    width: 95%;
     height: 30px;
     margin-left: 14px;
     margin-bottom: 15px;

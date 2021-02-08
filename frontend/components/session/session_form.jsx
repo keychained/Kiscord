@@ -14,6 +14,7 @@ class SessionForm extends React.Component {
         
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
+        this.update = this.update.bind(this);
     }
 
     componentWillUnmount() {
@@ -21,9 +22,9 @@ class SessionForm extends React.Component {
     }
 
     update(field) {
-        return e => {
+        return (e => {
             this.setState({ [field]: e.currentTarget.value })
-        };
+        });
     };
 
     handleSubmit(e) {
@@ -39,7 +40,6 @@ class SessionForm extends React.Component {
 
 
     render() {
-
         return (
           <div id="form-parent">
             <img id="form-logo" src={window.logo}></img>
@@ -65,9 +65,10 @@ class SessionForm extends React.Component {
                     EMAIL
                     <div id="label-error">
                       {this.props.errors["email"] &&
-                      document.querySelector(
-                        "#email-input-error, #email-input"
-                      ).value.length === 0
+                      // document.querySelector(
+                      //   "#email-input-error, #email-input"
+                      // ).value.length === 0
+                      this.state.email.length === 0
                         ? " - This field is required"
                         : this.props.errors["email"]
                         ? this.props.errors["email"]
@@ -98,9 +99,10 @@ class SessionForm extends React.Component {
                       USERNAME
                       <div id="label-error">
                         {this.props.errors["email"] &&
-                        document.querySelector(
-                          "#username-input-error, #username-input"
-                        ).value.length === 0
+                        // document.querySelector(
+                        //   "#username-input-error, #username-input"
+                        // ).value.length === 0
+                      this.state.username.length === 0
                           ? " - This field is required"
                           : this.props.errors["username"]
                           ? this.props.errors["username"]

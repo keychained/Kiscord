@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { openModal, closeModal } from "../../actions/modal_actions";
+import { closeModal } from "../../actions/modal_actions";
 import ServerCode from "./server_code";
 
 const msp = state => ({
@@ -7,7 +7,6 @@ const msp = state => ({
 })
 
 const mdp = dispatch => ({
-    openModal: (modal) => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),
 });
 

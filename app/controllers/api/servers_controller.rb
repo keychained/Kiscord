@@ -42,8 +42,20 @@ class Api::ServersController < ApplicationController
         end
     end
 
+    def leave
+        @server = current_user.servers.find_by(id: params[:serverId]) || current_user.subscribed_servers.find_by(id: params[:serverId])
+        @server_membership = ServerMember.find_by(member_id: current_user.id, server_id: params[:serverId])
+    
+         if @server && @server_membership
+            @server_membership.destroy
+            render json: @server.id
+         else
+            render json: ["There's been a problem!"], status: 422
+         end
+    end
+
     def destroy
-        @server = current_user.find_by(id: params[:id])
+        @server = current_user.servers.find_by(id: params[:id])
 
         if @server
            @server.destroy

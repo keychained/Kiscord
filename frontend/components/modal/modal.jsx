@@ -7,6 +7,7 @@ import ChannelCreateContainer from '../channel/channel_create_container';
 import ServerCodeContainer from '../server/server_code_container';
 import ServerJoinContainer from '../server/server_join_container';
 import ServerLeaveContainer from '../server/server_leave_container';
+import ServerDeleteContainer from '../server/server_delete_container';
 
 function Modal( {modal, closeModal }) {
     if (!modal) {
@@ -32,6 +33,9 @@ function Modal( {modal, closeModal }) {
             break;
         case "serverLeave":
             component = <ServerLeaveContainer />;
+            break;
+        case "serverDelete":
+            component = <ServerDeleteContainer />;
             break;
         default:
             return null;

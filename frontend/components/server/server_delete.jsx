@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-class ServerLeave extends React.Component {
+class ServerDelete extends React.Component {
     constructor(props) {
         super(props);
     };
@@ -10,9 +10,9 @@ class ServerLeave extends React.Component {
         this.props.clearErrors();
     }
 
-    leaveServer(e) {
+    deleteServer(e) {
          e.preventDefault();
-         this.props.leaveServer(parseInt(window.location.href.substr(window.location.href.lastIndexOf('/') + 1)))
+         this.props.deleteServer(parseInt(window.location.href.substr(window.location.href.lastIndexOf('/') + 1)))
          .then(() => this.props.closeModal(e))
          this.props.history.push('/channels/@me')
     }
@@ -22,12 +22,12 @@ class ServerLeave extends React.Component {
             <>
             <div id="channel-create-container">
             <p id="close" onClick={ () => this.props.closeModal()}>X</p>
-            <p id="create-channel">Leave Server</p>
-            <p id="create-info2">Are you sure you want to leave the server?</p>
+            <p id="create-channel">Delete Server</p>
+            <p id="create-info2">Are you sure you want to delete the server?</p>
             <p id="server-errors">{this.props.errors}</p>
                 <div id="code-back-join">
                     <p onClick={ () => this.props.closeModal()} id="code-back">Cancel</p>
-                    <input onClick={(e) => this.leaveServer(e)} id="code-join" type="submit" value="Leave"/>
+                    <input onClick={(e) => this.deleteServer(e)} id="code-join" type="submit" value="Leave"/>
                 </div>    
             </div>
             </>
@@ -35,4 +35,4 @@ class ServerLeave extends React.Component {
     }
 }
 
-export default withRouter(ServerLeave);
+export default withRouter(ServerDelete);

@@ -13,7 +13,7 @@ class ServerLeave extends React.Component {
     leaveServer(e) {
          e.preventDefault();
          this.props.leaveServer(parseInt(window.location.href.substr(window.location.href.lastIndexOf('/') + 1)))
-         this.props.closeModal()
+         .then(() => this.props.closeModal(e))
          this.props.history.push('/channels/@me')
     }
 

@@ -27,7 +27,7 @@ class ServerDelete extends React.Component {
             <p id="server-errors">{this.props.errors}</p>
                 <div id="code-back-join">
                     <p onClick={ () => this.props.closeModal()} id="code-back">Cancel</p>
-                    <input onClick={(e) => this.deleteServer(e)} id="code-join" type="submit" value="Leave"/>
+                    <input onClick={(e) => this.deleteServer(e)} id="code-join" type="submit" value="Delete"/>
                 </div>    
             </div>
             </>

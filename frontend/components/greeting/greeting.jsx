@@ -97,6 +97,7 @@ class Greeting extends React.Component {
                             </div>
                             <div id='nav2-bar'>
                                 <div id='nav2'>
+                                    <i id='kishub2' className="fa fa-linkedin"></i><a id='nav-btn2' href="https://www.linkedin.com/in/kihoonchoi/">Linkedin</a>
                                     <i id='kishub2' className='fa fa-github fa-lg'></i><a id='nav-btn2' href="https://github.com/keychained">Kishub</a>
                                     <Link to='/'><img id='logo2' src={window.logo}></img></Link>
                                 </div>

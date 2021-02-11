@@ -42,6 +42,6 @@ export const createChannel = channel => dispatch => (
     ChannelAPI.createChannel(channel).then(channel => dispatch(receiveChannel(channel))).fail((errors => dispatch(receiveChannelErrors(errors.responseJSON))))
 );
 
-export const deleteServer = channelId => dispatch => (
+export const deleteChannel = channelId => dispatch => (
     ChannelAPI.deleteChannel(channelId).then(() => dispatch(removeChannel(channelId))).fail((errors => dispatch(receiveChannelErrors(errors.responseJSON))))
 );

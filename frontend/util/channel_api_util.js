@@ -1,7 +1,7 @@
 export const fetchChannels = serverId => (
     $.ajax({
         method: 'GET',
-        url: `/api/channels/`,
+        url: '/api/channels/',
         data: { serverId }
     })
 );

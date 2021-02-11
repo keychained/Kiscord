@@ -8,6 +8,7 @@ const EntitiesReducer = combineReducers({
     users: UsersReducer,
     servers: ServerReducer,
     channels: ChannelReducer,
+    messages: MessageReducer,
 });
 
 export default EntitiesReducer;

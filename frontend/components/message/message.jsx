@@ -7,7 +7,6 @@ class Message extends React.Component {
             body: "",
             user_id: this.props.currentUser.id,
             channel_id: "",
-            // time: new Date().toLocaleString()
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -44,7 +43,7 @@ class Message extends React.Component {
         const channelTitle = channels[last].title
         const messagesFiltered = messages.filter(message => message.channel_id === channelId)
         const allMessages = messagesFiltered.map(message => (
-            <div id="messages" key={message.id}><div id="messages-user">{currentUser.username}<div id="messages-time">{this.state.time}</div></div>{message.body}</div>
+            <div id="messages" key={message.id}><div id="messages-user">{currentUser.username}<div id="messages-time">{new Date(message.created_at).toLocaleDateString('en-US')}</div></div>{message.body}</div>
         ))
         return(
             <div id="message-bar">

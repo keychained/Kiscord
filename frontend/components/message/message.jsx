@@ -30,19 +30,20 @@ class Message extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createMessage(this.state);
+        this.setState({ body: ""})
     };
 
 
 
     render() {
-        const { channels, channelsList, messages } = this.props
+        const { channels, channelsList, messages, messages1 } = this.props
         if (!channelsList.length) return null;
         const last = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
         const channelId = parseInt(last)
         this.state.channel_id = channelId
         const channelTitle = channels[last].title
         const allMessages = messages.map(message => (
-            <div id="messages" key={message.id}>{message.body}</div>
+            <div id="messages" key={message.id}>{message.channel_id === channelId ? message.body : null}</div>
         ))
         return(
             <div id="message-bar">
@@ -57,7 +58,6 @@ class Message extends React.Component {
                     placeholder="  Message"
                     value={this.state.body}
                     onChange={this.update('body')}
-                    autoComplete="false"
                  />
                  <input
                     type="hidden"

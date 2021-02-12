@@ -10,6 +10,7 @@ const msp = state => ({
     channels: state.entities.channels,
     channelsList: Object.values(state.entities.channels),
     messages: Object.values(state.entities.messages),
+    messages1: state.entities.messages,
     currentUser: state.entities.users[state.session.id],
     errors: state.errors.message
 });
@@ -17,7 +18,7 @@ const msp = state => ({
 const mdp = dispatch => ({
     getAllChannels: serverId => dispatch(fetchChannels(serverId)),
     getAllServers: () => dispatch(fetchServers()),
-    getMessages: () => dispatch(fetchMessages()),
+    getMessages: channelId => dispatch(fetchMessages(channelId)),
     createMessage: message => dispatch(createMessage(message))
 });
 

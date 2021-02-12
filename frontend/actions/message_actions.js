@@ -24,8 +24,8 @@ export const clearMessageErrors = () => ({
     type: CLEAR_MESSAGE_ERRORS
 })
 
-export const fetchMessages = () => dispatch => (
-    MessageAPI.fetchMessages().then(messages => dispatch(receiveAllMessages(messages))).fail(errors => dispatch(receiveMessageErrors(errors.responseJSON)))
+export const fetchMessages = channelId => dispatch => (
+    MessageAPI.fetchMessages(channelId).then(messages => dispatch(receiveAllMessages(messages))).fail(errors => dispatch(receiveMessageErrors(errors.responseJSON)))
 );
 
 export const createMessage = message => dispatch => (

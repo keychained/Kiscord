@@ -30,6 +30,7 @@
     flex-direction: column;
     height: 85%;
     width: 100%;
+    overflow: auto;
 }
 
 #message-input {
@@ -45,4 +46,10 @@
 #messages {
     position: relative;
     display: flex;
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

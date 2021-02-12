@@ -42,8 +42,14 @@ class Message extends React.Component {
         const channelId = parseInt(last)
         this.state.channel_id = channelId
         const channelTitle = channels[last].title
+        // let arrays = [];
+        // messages.forEach(message => {
+        //     if (message.channel_id === channelId) {
+        //         arrays << message
+        //     }
+        // })
         const allMessages = messages.map(message => (
-            <div id="messages" key={message.id}>{message.channel_id === channelId ? message.body : null}</div>
+            <div id="messages" key={message.id}>{message.body}</div>
         ))
         return(
             <div id="message-bar">

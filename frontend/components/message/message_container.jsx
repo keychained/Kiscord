@@ -18,7 +18,7 @@ const msp = state => ({
 const mdp = dispatch => ({
     getAllChannels: serverId => dispatch(fetchChannels(serverId)),
     getAllServers: () => dispatch(fetchServers()),
-    getMessages: channelId => dispatch(fetchMessages(channelId)),
+    getMessages: () => dispatch(fetchMessages()),
     createMessage: message => dispatch(createMessage(message))
 });
 

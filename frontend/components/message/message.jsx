@@ -60,9 +60,9 @@ class Message extends React.Component {
             <div id="message-channel-title"><div id="message-sign">#</div>{channelTitle}
             </div>
                 <div id="message-window">{allMessages}
-                        <div style={{ float:"left", clear: "both" }}
+                    <div style={{ float:"left", clear: "both" }}
                           ref={(el) =>  (this.messagesEnd = el)}>
-                        </div>
+                    </div>
                 </div>
                 <form onSubmit={this.handleSubmit}>
                  <input 

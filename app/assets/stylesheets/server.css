@@ -172,15 +172,15 @@
 #channel-bar {
     position: relative;
     display: flex;
+    flex-direction: column;
     width: 15%;
     background-color: #2f3136
 }
 
 #find-convo {
     position: relative;
-    width: 85%;
+    width: 88%;
     top: 9px;
-    left: 10px;
     padding: 5px;
     border-radius: 4px;
     box-shadow: none;
@@ -188,42 +188,47 @@
     background-color: #202225;
     border: none;
     height: 19px;
-    width: 88%;
     color: #4f545c;
-    text-align: left;
     outline: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 #user-bar {
-    position: absolute;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
     height: 53px;
-    bottom: 0px;
     background-color: #292b2f;
+    margin-top: auto;
 }
 
 #username {
     position: relative;
+    display: flex;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #FFFFFF;
-    top: 15px;
-    left: 60px;
+    margin-right: auto;
 }
 
 #logo-only2 {
-    position: absolute;
-    width: 15%;
-    top: 12px;
-    left: 12px;
+    position: relative;
+    display: flex;
+    width: 20%;
+    height: 50%;
+    margin-right: 5px;
+    margin-left: 10px;
 }
 
 #gear-icon {
-    position: absolute;
-    bottom: 18px;
-    right: 20px;
+    position: relative;
+    display: flex;
     color: #b9bbbe;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 #gear-tip {

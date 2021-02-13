@@ -46,6 +46,7 @@
     border-radius: 5px;
     padding-left: 10px;
     background-color: #72767D;
+    color: white;
 }
 
 #message-input::placeholder {

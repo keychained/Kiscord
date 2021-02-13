@@ -1,6 +1,7 @@
 #channels-container {
     position: relative;
     display: flex;
+    width: 100%;
     flex-direction: column;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
 }

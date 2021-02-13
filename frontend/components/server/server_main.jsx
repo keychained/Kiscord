@@ -27,7 +27,6 @@ class ServerMain extends React.Component {
    ))
        return(
             <div id='server-background'>
-                {final ? <MessageContainer /> : ""}
                <img id='no-friends' src={window.noFriends}></img>
                     <div id='friend-bar-cont'>
                         <div id='friend-bar'>
@@ -60,6 +59,7 @@ class ServerMain extends React.Component {
                         <i id='gear-icon' onClick={signout} className="fa fa-gear fa-lg"><span id='gear-tip'>Logout</span></i>
                     </div>
                 </div>
+                {final ? <MessageContainer /> : ""}
                 <div id="active-bar">
 
                 </div>

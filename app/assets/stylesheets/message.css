@@ -64,12 +64,20 @@
     margin-bottom: 5px;
 }
 
-#messages-time {
+#messages-date {
     position: relative;
     display: flex;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #72767D;
     margin-left: 5px;
     font-size: 10px;
     margin-top: auto;
     margin-bottom: 1.5px;
+}
+
+#messages-time {
+    position: relative;
+    display: flex;
+    margin-left: 3px;
+    color: #72767D;
 }

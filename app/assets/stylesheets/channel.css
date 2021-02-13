@@ -207,6 +207,7 @@
     width: 70px;
     height: 38px;
     text-align: center;
+    z-index: 4;
 }
 
 #invite-code:hover #invite-code-tip {

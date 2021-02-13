@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Message extends React.Component {
     constructor(props) {
@@ -56,7 +57,7 @@ class Message extends React.Component {
                  <input 
                     id="message-input"
                     type="text"
-                    placeholder="Message"
+                    placeholder={`Message #${channelTitle}`}
                     value={this.state.body}
                     onChange={this.update('body')}
                     autoComplete="off"
@@ -73,4 +74,4 @@ class Message extends React.Component {
     }
 }
 
-export default Message;
+export default withRouter(Message);

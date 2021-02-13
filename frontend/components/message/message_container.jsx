@@ -10,7 +10,6 @@ const msp = state => ({
     channels: state.entities.channels,
     channelsList: Object.values(state.entities.channels),
     messages: Object.values(state.entities.messages),
-    messages1: state.entities.messages,
     currentUser: state.entities.users[state.session.id],
     errors: state.errors.message
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+
 
 class Message extends React.Component {
     constructor(props) {
@@ -14,10 +14,12 @@ class Message extends React.Component {
 
 
     componentDidMount() {
+        this.scrollToBottom();
         this.props.getMessages();
     }
 
     componentDidUpdate(prevProps, prevState) {
+        this.scrollToBottom();
         if (prevProps.match.params.channel_id !== this.props.match.params.channel_id) {
         this.props.getMessages();
         }
@@ -35,6 +37,11 @@ class Message extends React.Component {
         this.setState({ body: ""})
     };
 
+    scrollToBottom() {
+        if (this.messagesEnd) {
+        this.messagesEnd.scrollIntoView();
+        }
+    }
 
     render() {
         const { channels, channelsList, messages, currentUser } = this.props
@@ -52,7 +59,11 @@ class Message extends React.Component {
             <div id="message-container">
             <div id="message-channel-title"><div id="message-sign">#</div>{channelTitle}
             </div>
-                <div id="message-window">{allMessages}</div>
+                <div id="message-window">{allMessages}
+                        <div style={{ float:"left", clear: "both" }}
+                          ref={(el) =>  (this.messagesEnd = el)}>
+                        </div>
+                </div>
                 <form onSubmit={this.handleSubmit}>
                  <input 
                     id="message-input"
@@ -74,4 +85,4 @@ class Message extends React.Component {
     }
 }
 
-export default withRouter(Message);
+export default Message;

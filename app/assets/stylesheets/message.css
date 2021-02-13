@@ -1,7 +1,7 @@
 #message-bar {
     position: relative;
     display: flex;
-    width: 59.2%;
+    width: 70%;
     height: 100%;
     background-color: #36393f;
     z-index: 3;

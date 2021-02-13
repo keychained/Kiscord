@@ -11,6 +11,7 @@ class Message extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+
     componentDidMount() {
         this.props.getMessages();
     }
@@ -45,6 +46,7 @@ class Message extends React.Component {
         const allMessages = messagesFiltered.map(message => (
             <div id="messages" key={message.id}><div id="messages-user">{currentUser.username}<div id="messages-date">{new Date(message.created_at).toLocaleDateString('en-US')}<div id="messages-time">at {new Date(message.created_at).toLocaleTimeString('en-US')}</div></div></div>{message.body}</div>
         ))
+
         return(
             <div id="message-bar">
             <div id="message-container">
@@ -55,7 +57,7 @@ class Message extends React.Component {
                  <input 
                     id="message-input"
                     type="text"
-                    placeholder="  Message"
+                    placeholder="Message"
                     value={this.state.body}
                     onChange={this.update('body')}
                  />

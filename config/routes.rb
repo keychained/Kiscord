@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
   end
   # For details on the DSL a vailable within this file, see http://guides.rubyonrails.org/routing.html
-  mount.ActionCable.server => '/cable'
+  mount ActionCable.server => '/cable'
 end

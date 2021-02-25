@@ -5,7 +5,7 @@ class MessagesChannel < ApplicationCable::Channel
     end
 
     def received(data)
-        MessagesChannel.broadcast_to( "channel_messages", { messages: @channel_messages })
+        MessagesChannel.broadcast_to( @channel_messages, { messages: @channel_messages })
     end
 
     def unsubscribed

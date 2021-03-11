@@ -6,7 +6,7 @@ import actionCable from 'actioncable';
 
 const CableApp = {};
 
-CableApp.cable = actionCable.createConsumer(`ws://${windows.location.hostname}:3000/cable`)
+CableApp.cable = actionCable.createConsumer(`ws://${window.location.hostname}:3000/cable`)
 
 const Root = ({ store }) => (
     <Provider store={store}>

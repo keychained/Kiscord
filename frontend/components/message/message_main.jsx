@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-class Message extends React.Component {
+class MessageMain extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -107,4 +106,4 @@ class Message extends React.Component {
     }
 }
 
-export default Message;
+export default MessageMain;

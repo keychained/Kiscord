@@ -2,7 +2,7 @@ import React from 'react';
 import { ProtectedRoute } from '../../util/route_util';
 import { Link } from 'react-router-dom';
 import ChannelMainContainer from '../channel/channel_main_container';
-import MessageContainer from '.././message/message_container'
+import MessageMainContainer from '../message/message_main_container'
 
 class ServerMain extends React.Component {
     constructor(props) {
@@ -59,7 +59,7 @@ class ServerMain extends React.Component {
                         <i id='gear-icon' onClick={signout} className="fa fa-gear fa-lg"><span id='gear-tip'>Logout</span></i>
                     </div>
                 </div>
-                {final ? <MessageContainer /> : ""}
+                {final ? <MessageMainContainer /> : ""}
                 <div id="active-bar">
 
                 </div>

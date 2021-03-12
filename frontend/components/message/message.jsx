@@ -16,14 +16,13 @@ class Message extends React.Component {
     componentDidMount() {
         this.scrollToBottom();
         this.props.getAllUsers();
-        this.props.getMessages();
+        this.props.getMessages();    
     }
 
     componentDidUpdate(prevProps, prevState) {
         this.scrollToBottom();
-        // this.props.getAllUsers();
         if (prevProps.match.params.channel_id !== this.props.match.params.channel_id) {
-        this.props.getMessages();
+            this.props.getMessages();
         }
     }
 

@@ -4,6 +4,7 @@ import Message from './message';
 import { fetchChannels } from "../../actions/channel_actions";
 import { fetchServers } from "../../actions/server_actions";
 import { fetchMessages, createMessage } from "../../actions/message_actions";
+import { fetchUsers } from "../../actions/user_actions";
 
 
 const msp = state => ({
@@ -16,6 +17,7 @@ const msp = state => ({
 });
 
 const mdp = dispatch => ({
+    getAllUsers: () => dispatch(fetchUsers()),
     getAllChannels: serverId => dispatch(fetchChannels(serverId)),
     getAllServers: () => dispatch(fetchServers()),
     getMessages: () => dispatch(fetchMessages()),

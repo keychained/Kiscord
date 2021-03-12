@@ -15,6 +15,7 @@ class Message extends React.Component {
 
     componentDidMount() {
         this.scrollToBottom();
+        this.props.getAllUsers();
         this.props.getMessages();
     }
 

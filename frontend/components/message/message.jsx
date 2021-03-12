@@ -49,7 +49,7 @@ class Message extends React.Component {
         e.preventDefault();
         // this.props.createMessage(this.state);
     if (this.state.body.length) {
-      App.cable.subscriptions.subscriptions[0].speak({
+        App.cable.subscriptions.subscriptions[0].speak({
         message: this.state.body,
         userId: this.state.user_id,
         channelId: this.state.channel_id

@@ -21,6 +21,7 @@ class Message extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         this.scrollToBottom();
+        // this.props.getAllUsers();
         if (prevProps.match.params.channel_id !== this.props.match.params.channel_id) {
         this.props.getMessages();
         }

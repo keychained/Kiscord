@@ -1,11 +1,11 @@
 class MessagesChannel < ApplicationCable::Channel
     def subscribed
-        @channel_messages = Messages.find_by(id: params[:channel_id])
-        stream_for @channel_messages
+        stream_for "messages_channel#{params[:channelId]}"
     end
 
-    def received(data)
-        MessagesChannel.broadcast_to( @channel_messages, { messages: @channel_messages })
+    def speak(data)
+        socket = { body: data['message'], user_id: data["userId"], channel_id: data["channelId"] }
+        MessagesChannel.broadcast_to("messages_channel", socket)
     end
 
     def unsubscribed

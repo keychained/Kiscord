@@ -14,9 +14,22 @@ class Message extends React.Component {
 
 
     componentDidMount() {
+        // this.props.getAllUsers();
         this.scrollToBottom();
-        this.props.getAllUsers();
-        this.props.getMessages();    
+        this.props.getMessages();
+    let channelId = this.props.channels[this.props.match.params.channelId]
+    App.cable.subscriptions.create(
+      { 
+        channel: "MessagesChannel", channelId: channelId },
+      {
+        received: message => {
+          this.props.createMessage(message)
+        },
+        speak: function(message) {
+          return this.perform("speak", message)
+        }
+      }
+    );
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -34,7 +47,14 @@ class Message extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createMessage(this.state);
+        // this.props.createMessage(this.state);
+    if (this.state.body.length) {
+      App.cable.subscriptions.subscriptions[0].speak({
+        message: this.state.body,
+        userId: this.state.user_id,
+        channelId: this.state.channel_id
+      });
+    }
         this.setState({ body: ""})
     };
 

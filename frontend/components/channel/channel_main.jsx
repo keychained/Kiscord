@@ -9,7 +9,8 @@ class ChannelMain extends React.Component {
     }
 
    componentDidMount() {
-        this.props.getAllChannels(this.props.match.params.server_id);
+       this.props.getAllChannels(this.props.match.params.server_id);
+       this.props.getAllUsers();
    }
 
    componentDidUpdate(prevProps, prevState) {

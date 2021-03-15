@@ -199,7 +199,7 @@
     top: -2px;
     left: 60px;
     font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: #FFFFFF;
     background-color: black;
@@ -212,7 +212,7 @@
 
 #invite-code:hover #invite-code-tip {
     visibility: visible;
-    z-index: 1;
+    z-index: 4;
 }
 
 #invite-code #invite-code-tip::after {

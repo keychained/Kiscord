@@ -72,7 +72,7 @@ class MessageMain extends React.Component {
         // if (App.cable.subscriptions.subscriptions[1]) {
         // App.cable.subscriptions.subscriptions[1].unsubscribe();
         // } else {
-        const channelId = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+        // const channelId = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
         App.cable.subscriptions.subscriptions[0].speak({
         body: this.state.body,
         userId: this.state.user_id,

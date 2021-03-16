@@ -16,10 +16,10 @@ class MessageMain extends React.Component {
         // this.props.getAllUsers();
         this.scrollToBottom();
         this.props.getMessages();
-        if (!App.cable.subscriptions.subscriptions.length) {
+        // if (!App.cable.subscriptions.subscriptions[1]) {
         App.test = App.cable.subscriptions.create(
             {
-                channel: "MessagesChannel" },
+                channel: "MessagesChannel", channel_id: window.location.href.substr(window.location.href.lastIndexOf('/') + 1) },
                 {
                     received: message => {
                         this.props.createMessage(message)
@@ -30,18 +30,33 @@ class MessageMain extends React.Component {
                 }
         );
             // } else {
-            //     App.test.unsubscribe();
+            //     App.cable.subscriptions.subscriptions[0].unsubscribe();
             //     // delete test;
             // }
-        } else if (App.cable.subscriptions.subscriptions[1]) {
-            App.test.unsubscribe();
-        }
+            // }
+        // } else if (App.cable.subscriptions.subscriptions[1]) {
+        //     App.test.unsubscribe();
+        // }
     }
 
     componentDidUpdate(prevProps, prevState) {
         this.scrollToBottom();
         if (prevProps.match.params.channel_id !== this.props.match.params.channel_id) {
             this.props.getMessages();
+            App.cable.subscriptions.create({
+                channel: "MessagesChannel", channel_id: window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+            },
+            {
+                received: message => {
+                    this.props.createMessage(message)
+                },
+                speak: function(message) {
+                    return this.perform("speak", message)
+                }
+            })
+            App.cable.subscriptions.subscriptions[0].unsubscribe();
+        } else if (App.cable.subscriptions.subscriptions.length === 2) {
+            App.cable.subscriptions.subscriptions[0].unsubscribe();
         }
     }
 
@@ -57,12 +72,12 @@ class MessageMain extends React.Component {
         // if (App.cable.subscriptions.subscriptions[1]) {
         // App.cable.subscriptions.subscriptions[1].unsubscribe();
         // } else {
-        App.cable.subscriptions.subscriptions[0].speak({
+        const channelId = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
+        App.cable.subscriptions.subscriptions.find(sub => sub.identifier === `{"channel":"MessagesChannel","channel_id":"${channelId}"}`).speak({
         body: this.state.body,
         userId: this.state.user_id,
         channelId: this.state.channel_id
       });
-
         this.setState({ body: ""})
     };
 

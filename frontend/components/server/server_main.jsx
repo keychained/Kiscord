@@ -11,6 +11,7 @@ class ServerMain extends React.Component {
    }
 
    componentDidMount() {
+       this.props.getAllUsers();
        this.props.getAllServers();
    }
 

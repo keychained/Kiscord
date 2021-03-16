@@ -17,7 +17,7 @@ class MessageMain extends React.Component {
         this.scrollToBottom();
         this.props.getMessages();
         if (!App.cable.subscriptions.subscriptions.length) {
-        App.cable.subscriptions.create(
+        App.test = App.cable.subscriptions.create(
             {
                 channel: "MessagesChannel" },
                 {
@@ -29,8 +29,12 @@ class MessageMain extends React.Component {
                     }
                 }
         );
+            // } else {
+            //     App.test.unsubscribe();
+            //     // delete test;
+            // }
         } else if (App.cable.subscriptions.subscriptions[1]) {
-            App.cable.subscriptions.subscriptions[1].unsubscribe();
+            App.test.unsubscribe();
         }
     }
 

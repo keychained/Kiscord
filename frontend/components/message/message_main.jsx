@@ -99,12 +99,14 @@ class MessageMain extends React.Component {
             
             <div id="messages" key={message.id}><div id="messages-user">{currentUsername[message.user_id].username}<div id="messages-date">{new Date(message.created_at).toLocaleDateString('en-US')}<div id="messages-time">at {new Date(message.created_at).toLocaleTimeString('en-US')}</div></div></div>{message.body}</div>
         ))
+
+        const removeDups = [...new Set(allMessages)]
         return(
             <div id="message-bar">
             <div id="message-container">
             <div id="message-channel-title"><div id="message-sign">#</div>{channelTitle}
             </div>
-                <div id="message-window">{allMessages}
+                <div id="message-window">{removeDups}
                     <div style={{ float:"left", clear: "both" }}
                           ref={(el) =>  (this.messagesEnd = el)}>
                     </div>

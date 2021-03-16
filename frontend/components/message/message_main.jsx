@@ -16,19 +16,20 @@ class MessageMain extends React.Component {
         // this.props.getAllUsers();
         this.scrollToBottom();
         this.props.getMessages();
-    let channelId = this.props.channels[this.props.match.params.channelId]
-    App.cable.subscriptions.create(
-      { 
-        channel: "MessagesChannel", channelId: channelId },
-      {
-        received: message => {
-          this.props.createMessage(message)
-        },
-        speak: function(message) {
-          return this.perform("speak", message)
-        }
-      }
-    );
+        let channelId = this.props.channels[this.props.match.params.channelId]
+        let serverId = this.props.channels[this.props.match.params.serverId]
+        App.cable.subscriptions.create(
+            {
+                channel: "MessagesChannel", server_id: serverId, channel_id: channelId },
+                {
+                    received: message => {
+                        this.props.createMessage(message)
+                    },
+                    speak: function(message) {
+                        return this.perform("speak", message)
+                    }
+                }
+                );
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -47,13 +48,15 @@ class MessageMain extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         // this.props.createMessage(this.state);
-    // if (this.state.body.length) {
+        if (App.cable.subscriptions.subscriptions[1]) {
+        App.cable.subscriptions.subscriptions[1].unsubscribe();
+        }
         App.cable.subscriptions.subscriptions[0].speak({
         body: this.state.body,
         userId: this.state.user_id,
         channelId: this.state.channel_id
       });
-    // }
+
         this.setState({ body: ""})
     };
 

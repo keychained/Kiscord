@@ -54,14 +54,14 @@ class MessageMain extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         // this.props.createMessage(this.state);
-        if (App.cable.subscriptions.subscriptions[1]) {
-        App.cable.subscriptions.subscriptions[1].unsubscribe();
-        } else {
+        // if (App.cable.subscriptions.subscriptions[1]) {
+        // App.cable.subscriptions.subscriptions[1].unsubscribe();
+        // } else {
         App.cable.subscriptions.subscriptions[0].speak({
         body: this.state.body,
         userId: this.state.user_id,
         channelId: this.state.channel_id
-      })};
+      });
 
         this.setState({ body: ""})
     };

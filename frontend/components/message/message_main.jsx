@@ -73,7 +73,7 @@ class MessageMain extends React.Component {
         // App.cable.subscriptions.subscriptions[1].unsubscribe();
         // } else {
         const channelId = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
-        App.cable.subscriptions.subscriptions.find(sub => sub.identifier === `{"channel":"MessagesChannel","channel_id":"${channelId}"}`).speak({
+        App.cable.subscriptions.subscriptions[0].speak({
         body: this.state.body,
         userId: this.state.user_id,
         channelId: this.state.channel_id

@@ -29,6 +29,8 @@ class MessageMain extends React.Component {
                     }
                 }
         );
+        } else if (App.cable.subscriptions.subscriptions[1]) {
+            App.cable.subscriptions.subscriptions[1].unsubscribe();
         }
     }
 

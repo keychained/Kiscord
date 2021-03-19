@@ -60,7 +60,7 @@ class Api::ServersController < ApplicationController
         if @server
            @server.destroy
         else
-            render json: ["Cant delete server!"], status: 404
+            render json: ["Cant delete someone else's server!"], status: 404
         end
     end
 

@@ -220,6 +220,9 @@ class SessionForm extends React.Component {
                             <option value="DEFAULT" disabled hidden>
                               Year
                             </option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
                             <option value="2018">2018</option>
                             <option value="2017">2017</option>
                             <option value="2016">2016</option>
@@ -372,16 +375,6 @@ class SessionForm extends React.Component {
                       <Link id="register-login2" to="/login">
                         Already have an account?
                       </Link>
-                      <p id="terms">
-                        By creating an account, you agree to Kiscord's{" "}
-                        <a href="https://discord.com/new/terms">
-                          Terms of Service
-                        </a>{" "}
-                        and{" "}
-                        <a href="https://discord.com/new/privacy">
-                          Privacy Policy
-                        </a>
-                      </p>
                     </div>
                   )}
                 </form>

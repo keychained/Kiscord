@@ -30,7 +30,7 @@ class ServerMain extends React.Component {
             <div id='server-background'>
                <img id='no-friends' src={window.noFriends}></img>
                     <div id='friend-bar-cont'>
-                        <div id='friend-bar'>
+                        {/* <div id='friend-bar'>
                             <div id='friend-list'>
                                 <div id='friend-btns'>
                                     <i id='friend-icon' className="fa fa-users fa-lg"><p id='friend-icon-label'>Friends</p></i>
@@ -44,7 +44,7 @@ class ServerMain extends React.Component {
                             <i id='comment-icon' className='fa fa-comments fa-lg'></i>
                             <i id='inbox-icon' className='fa fa-inbox fa-lg'></i>
                             <i id='help-icon' className='fa fa-question-circle fa-lg'></i>
-                        </div>
+                        </div> */}
                     </div>
                 <div id='server-bar'>
                    <Link id='logo-cont' to='/channels/@me'><img id='logo-only' src={window.logoOnly}></img><span id='logo-tip'>Home</span></Link>
@@ -53,7 +53,7 @@ class ServerMain extends React.Component {
                    <div id='add-server' onClick={() => this.props.openModal('serverJoin')}>Join<span id='add-server-tip'>Join a Server</span></div>
                 </div>
                 <div id='channel-bar'>
-                {Number.isInteger(serverId) && Number.isInteger(secondId) ? (<div id="channels-container"><div id="server-title">{serversTitle[secondId].title}</div><ChannelMainContainer/></div>) : Number.isInteger(serverId) || Number.isInteger(secondId) ? (<div id="channels-container"><div id="server-title">{serversTitle[serverId].title}</div><ChannelMainContainer/></div>) : (<input id='find-convo' type="text" placeholder='Find or start a conversation'></input>) }
+                {Number.isInteger(serverId) && Number.isInteger(secondId) ? (<div id="channels-container"><div id="server-title">{serversTitle[secondId].title}</div><ChannelMainContainer/></div>) : Number.isInteger(serverId) || Number.isInteger(secondId) ? (<div id="channels-container"><div id="server-title">{serversTitle[serverId].title}</div><ChannelMainContainer/></div>) : "" }
                     <div id='user-bar'>
                         <img id='logo-only2' src={window.logoOnly}></img>
                         <p id='username'>{currentUser.username}</p>
@@ -65,9 +65,9 @@ class ServerMain extends React.Component {
 
                 </div>
                 <div id='add-friend'>
-                    <div id='add-friend-label'>ADD FRIEND</div>
+                    {/* <div id='add-friend-label'>ADD FRIEND</div>
                     <div id='add-friend-label2'>You can add friends here!</div>
-                    <input id='add-friend-input' type="text" placeholder='Enter a Username'></input>
+                    <input id='add-friend-input' type="text" placeholder='Enter a Username'></input> */}
                 </div>
             </div>
        )

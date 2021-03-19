@@ -619,7 +619,8 @@
     width: 700px;
     height: 408px;
     top: 7%;
-    left: 20%;
+    /* left: 20%; */
+    margin: 0 auto;
 }
 
 #form-container {

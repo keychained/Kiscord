@@ -221,6 +221,7 @@
     height: 50%;
     margin-right: 5px;
     margin-left: 10px;
+    object-fit: contain;
 }
 
 #gear-icon {

@@ -13,10 +13,8 @@ class MessageMain extends React.Component {
 
 
     componentDidMount() {
-        // this.props.getAllUsers();
         this.scrollToBottom();
         this.props.getMessages();
-        // if (!App.cable.subscriptions.subscriptions[1]) {
         App.test = App.cable.subscriptions.create(
             {
                 channel: "MessagesChannel", channel_id: window.location.href.substr(window.location.href.lastIndexOf('/') + 1) },
@@ -29,14 +27,6 @@ class MessageMain extends React.Component {
                     }
                 }
         );
-            // } else {
-            //     App.cable.subscriptions.subscriptions[0].unsubscribe();
-            //     // delete test;
-            // }
-            // }
-        // } else if (App.cable.subscriptions.subscriptions[1]) {
-        //     App.test.unsubscribe();
-        // }
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -68,11 +58,6 @@ class MessageMain extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // this.props.createMessage(this.state);
-        // if (App.cable.subscriptions.subscriptions[1]) {
-        // App.cable.subscriptions.subscriptions[1].unsubscribe();
-        // } else {
-        // const channelId = window.location.href.substr(window.location.href.lastIndexOf('/') + 1)
         App.cable.subscriptions.subscriptions[0].speak({
         body: this.state.body,
         userId: this.state.user_id,

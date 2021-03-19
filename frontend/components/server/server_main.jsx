@@ -1,5 +1,4 @@
 import React from 'react';
-import { ProtectedRoute } from '../../util/route_util';
 import { Link } from 'react-router-dom';
 import ChannelMainContainer from '../channel/channel_main_container';
 import MessageMainContainer from '../message/message_main_container'

@@ -65,9 +65,6 @@ class SessionForm extends React.Component {
                     EMAIL
                     <div id="label-error">
                       {this.props.errors["email"] &&
-                      // document.querySelector(
-                      //   "#email-input-error, #email-input"
-                      // ).value.length === 0
                       this.state.email.length === 0
                         ? " - This field is required"
                         : this.props.errors["email"]
@@ -89,9 +86,6 @@ class SessionForm extends React.Component {
                     <label
                       id={
                         this.props.errors["username"] &&
-                        // document.querySelector(
-                        //   "#username-input-error, #username-input"
-                        // ).value.length === 0
                       this.state.username.length === 0
                           ? "label-session-error"
                           : "label"
@@ -100,9 +94,6 @@ class SessionForm extends React.Component {
                       USERNAME
                       <div id="label-error">
                         {this.props.errors["email"] &&
-                        // document.querySelector(
-                        //   "#username-input-error, #username-input"
-                        // ).value.length === 0
                       this.state.username.length === 0
                           ? " - This field is required"
                           : this.props.errors["username"]
@@ -134,9 +125,6 @@ class SessionForm extends React.Component {
                     PASSWORD
                     <div id="label-error">
                       {this.props.errors["email"] &&
-                      // document.querySelector(
-                      //   "#password-input-error, #password-input"
-                      // ).value.length === 0
                       this.state.password.length === 0
                         ? " - This field is required"
                         : this.props.errors["password"]

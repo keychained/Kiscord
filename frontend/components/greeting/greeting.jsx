@@ -27,8 +27,8 @@ class Greeting extends React.Component {
                 <div id='home-background'>
                     {display}
                     <div id='nav'>
-                        <i id='kishub1' className="fa fa-linkedin"></i><a id='nav-btn' href="https://www.linkedin.com/in/kihoonchoi/">Linkedin</a>
-                        <i id='kishub1' className='fa fa-github fa-lg'></i><a id='nav-btn' href="https://github.com/keychained">Github</a>
+                        <i id='kishub1' className="fa fa-linkedin"></i><a id='nav-btn' href="https://www.linkedin.com/in/kihoonchoi/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                        <i id='kishub1' className='fa fa-github fa-lg'></i><a id='nav-btn' href="https://github.com/keychained" target="_blank" rel="noopener noreferrer">Github</a>
                     </div>
                     <h1 id='homepage-welcome1'>Your place to Talk</h1>
                     <p id='homepage-welcome2'>Kiscord makes talking to your friends easier!</p>
@@ -82,11 +82,11 @@ class Greeting extends React.Component {
                 </div>
                 <div id='chilling4'>
                     <div id='chilling4-container'>
-                        <div id='chilling4-welcome-container'>
+                        {/* <div id='chilling4-welcome-container'>
                             <h1 id='chilling4-welcome'>Reliable tech for staying close</h1>
                             <h2 id='chilling4-welcome2'>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</h2>
-                        </div>
-                        <img id='background-chilling4' src={window.backgroundChilling4}></img>
+                        </div> */}
+                        {/* <img id='background-chilling4' src={window.backgroundChilling4}></img> */}
                         <div id='end-background'>
                         <div id='background-end'>
                             <h1>Ready to start your journey?</h1>
@@ -97,8 +97,8 @@ class Greeting extends React.Component {
                             </div>
                             <div id='nav2-bar'>
                                 <div id='nav2'>
-                                    <i id='kishub2' className="fa fa-linkedin"></i><a id='nav-btn2' href="https://www.linkedin.com/in/kihoonchoi/">Linkedin</a>
-                                    <i id='kishub2' className='fa fa-github fa-lg'></i><a id='nav-btn2' href="https://github.com/keychained">Kishub</a>
+                                    <i id='kishub2' className="fa fa-linkedin"></i><a id='nav-btn2' href="https://www.linkedin.com/in/kihoonchoi/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                                    <i id='kishub2' className='fa fa-github fa-lg'></i><a id='nav-btn2' href="https://github.com/keychained" target="_blank" rel="noopener noreferrer">Kishub</a>
                                     <Link to='/'><img id='logo2' src={window.logo}></img></Link>
                                 </div>
                             </div>

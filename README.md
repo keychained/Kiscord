@@ -21,12 +21,12 @@ Users can create/login with unique credentials that can be used to access the fu
 
 ## Servers
 
-Feature to be implemented in the future.
+Servers can be created by users. Users can also delete and or leave said servers, as well as invite your friends with a unique invite code.
 
 ## Channels
 
-Feature to be implemented in the future.
+Servers all have a default general channel, but users can create channels inside each server that the user is a part of.
 
 ## Live Chat
 
-Feature to be implemented in the future.
+Users can talk to other users on the same channel via live chat.

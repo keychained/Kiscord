@@ -10,6 +10,8 @@ Kiscord is a clone of the popular live chat/message application Discord. Kiscord
 * Ruby on Rails
 * PostgreSQL
 * CSS/HTML
+* JavaScript
+* Action Cable
 
 # Features
 
